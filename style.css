@@ -3,3 +3,21 @@ Theme Name: Ylkusaunake theme
 Author: VK-DEV
 */
 
+/* Reset all Margins & Padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Background Patterns */
+body {
+    background-image: url('./img/bg-pattern.jpg');
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+
+
+.logo {
+    height: 180px;
+}

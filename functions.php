@@ -39,6 +39,17 @@ function load_bootstrap(){
 }
 add_action('wp_enqueue_scripts', 'load_bootstrap');
 
+// NAVIGATION
+add_theme_support('menus'); // Menus will show up in WP THEMES
+
+register_nav_menus(
+    array(
+        'top-menu' => __('Top menu', 'theme'),
+        /* 'footer-menu' => __('Footer Menu', 'theme'), */
+
+    )
+);
+
 /**
  * Register Custom Navigation Walker with Bootstrap
  */
@@ -48,7 +59,7 @@ function register_navwalker(){
 add_action( 'after_setup_theme', 'register_navwalker' );
 
 
-/* Widgets 
+/* Widgets */
 function register_widget_areas() {
 
  
@@ -95,4 +106,4 @@ function register_widget_areas() {
     
   }
   
-  add_action( 'widgets_init', 'register_widget_areas' );*/
+  add_action( 'widgets_init', 'register_widget_areas' );
