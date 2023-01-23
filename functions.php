@@ -34,8 +34,8 @@ add_action('wp_enqueue_scripts', 'load_scripts');
 
 // BOOTSTRAP JS
 function load_bootstrap(){
-    wp_register_script('bt4', get_template_directory_uri() . '/bt4/js/bootstrap.min.js', array(), false, 'all');
-    wp_enqueue_script('bt4');
+    wp_register_script('bootstrap-4', get_template_directory_uri() . '/bootstrap-4/js/bootstrap.min.js', array(), false, 'all');
+    wp_enqueue_script('bootstrap-4');
 }
 add_action('wp_enqueue_scripts', 'load_bootstrap');
 
