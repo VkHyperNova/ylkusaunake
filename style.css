@@ -21,8 +21,15 @@ body {
 
     /* colors */
     --color-black: rgb(31, 30, 30);
+    --color-black_2: rgba(0, 0, 0, 0.753);
     --color-white: rgb(255, 255, 255);
     --color-grey: rgb(168, 167, 167);
+    --color-blue: rgb(76, 117, 153);
+    --color-red: rgb(255, 0, 0, 0.5);
+    --color-cyan: rgb(0, 255, 191);
+    --color-yellow: rgb(229, 255, 0);
+    --color-vk-dev: rgba(106, 116, 106, 0.4);
+
 }
 
 
@@ -33,7 +40,6 @@ body {
 /***********************************************************************************************************************************************************************/
 /********************************************************************************* Header ******************************************************************************/
 /***********************************************************************************************************************************************************************/
-
 /* Logo */
 .logo {
     width: 200px;
@@ -41,32 +47,56 @@ body {
     margin-top: 1rem;
 }
 
-.header-hr {
-    border-top: 1px solid rgb(0, 0, 0);
-    margin: 0;
-}
-
-/* Header Background */
-.nav-bg,
 .logo-bg {
     background-color: var(--color-white);
 }
 
+/***********************************************************************************************************************************************************************/
 /* Navigation */
+
+.nav-bg {
+    background-color: var(--color-blue);
+}
+
+nav ul {
+    margin-left: auto !important;
+}
+
 nav li {
     font-size: 1.4rem;
     font-weight: bolder;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     padding-left: 1rem;
 }
+
+nav a {
+    color: var(--color-white);
+}
+
+nav a:hover {
+    color: var(--color-black);
+}
+
+.navbar-toggler-icon {
+    color: var(--color-white);
+}
+
+
+
+/***********************************************************************************************************************************************************************/
+
 
 /***********************************************************************************************************************************************************************/
 /********************************************************************************* front-page.php **********************************************************************/
 /***********************************************************************************************************************************************************************/
 
+/* Counter */
 .current-information-container {
     text-align: center !important;
     background-color: var(--color-black);
+    letter-spacing: 2px;
+    border-radius: 20%;
+    padding: 2rem;
 }
 
 .current-gender-in,
@@ -113,33 +143,35 @@ nav li {
     min-height: 80vh;
 }
 
+.red-hr {
+    border: 1px solid red;
+    margin: 0;
+}
 
 footer {
     background-color: var(--color-black);
     padding-top: 3rem;
-    color: var(--color-white);
 }
 
 /* footer information */
-.footer-information h4 {
+.footer-information h5 {
     color: var(--color-grey);
+    letter-spacing: 2px;
 }
 
 .footer-information ul {
     list-style-type: none;
 }
+
 .footer-information li {
     font-size: 1.2rem;
-}
-
-.footer-hr {
-    border-top: 1px solid red;
-    margin: 0;
+    letter-spacing: 1px;
+    color: var(--color-white);
 }
 
 .footer-logo {
     width: 10rem;
-  
+
 }
 
 
@@ -149,29 +181,37 @@ footer {
     padding-top: 1rem;
     padding-bottom: 1rem;
     text-align: center !important;
+    background-color: var(--color-black_2);
+}
 
+.footer-copyright span {
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: var(--color-grey);
 }
 
 .footer-copyright a {
     float: right;
     font-weight: bold;
-    color: var(--color-grey);
+    color: var(--color-vk-dev);
     transition: 0.3s;
-    padding-right: 1rem;
 }
 
 /* VK-dev watermark */
 .footer-copyright a:hover {
-    transform: scale(0.8);
-    transition: 0.3s;
+    transform: scale(1.1);
+    transition: 0.2s;
     text-decoration: none;
+    color: var(--color-white);
 }
 
 /***********************************************************************************************************************************************************************/
 /******************************************************************************** Mobile *******************************************************************************/
 /***********************************************************************************************************************************************************************/
 @media only screen and (max-width: 991px) {
-    .footer-information, .logo-bg {
+
+    .footer-information,
+    .logo-bg {
         text-align: center !important;
     }
 }

@@ -64,10 +64,10 @@ function register_widget_areas() {
 
  
     register_sidebar( array(
-      'name'          => 'Koostöö partnerid',
-      'id'            => 'footer_area_partners',
-      'description'   => 'Partnerite nimekiri',
-      'before_widget' => '<section class="footer-area footer-area-partners">',
+      'name'          => 'Aadress',
+      'id'            => 'footer_information_aadress',
+      'description'   => 'Aadress',
+      'before_widget' => '<section class="footer-area footer_information_aadress">',
       'after_widget'  => '</section>',
       'before_title'  => '<h4>',
       'after_title'   => '</h4>',
@@ -75,34 +75,26 @@ function register_widget_areas() {
 
 
     register_sidebar( array(
-        'name'          => 'Aadress',
-        'id'            => 'footer_area_adress',
+        'name'          => 'Kontakt',
+        'id'            => 'footer_information_kontakt',
         'description'   => 'Kontaktid ja aadressid',
-        'before_widget' => '<section class="footer-area footer-area-adress">',
+        'before_widget' => '<section class="footer-area footer_information_kontakt">',
         'after_widget'  => '</section>',
         'before_title'  => '<h4>',
         'after_title'   => '</h4>',
       ));
 
       register_sidebar( array(
-        'name'          => 'Kontaktid',
-        'id'            => 'footer_area_contacts',
+        'name'          => 'Avatud',
+        'id'            => 'footer_information_avatud',
         'description'   => 'Kontaktid ja aadressid',
-        'before_widget' => '<section class="footer-area footer-area-contacts">',
+        'before_widget' => '<section class="footer-area footer_information_avatud">',
         'after_widget'  => '</section>',
         'before_title'  => '<h4>',
         'after_title'   => '</h4>',
       ));
 
-      register_sidebar( array(
-        'name'          => 'Register',
-        'id'            => 'footer_area_register',
-        'description'   => 'Kontaktid ja aadressid',
-        'before_widget' => '<section class="footer-area footer-area-register">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h4>',
-        'after_title'   => '</h4>',
-      ));
+   
     
   }
   

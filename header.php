@@ -14,46 +14,6 @@
 
 <body <?php body_class(); ?>>
 
-
-
-
-    <!-- Counter -->
-    <div class="current-information-container">
-        <div class="container">
-            <div class="row p-2">
-                <?php if (get_field('kuva_avatud')) : ?>
-
-                    <!-- Open message -->
-                    <div class=" col-sm-12 col-lg-4 py-2">
-                        <div class="current-open-msg"><?php the_field('avatud_teade'); ?></div>
-                    </div>
-
-                    <!-- Gender information -->
-                    <div class="col-sm-12 col-lg-4 py-2">
-                        <div class="current-gender-in <?php if (get_field('naised_voi_mehed') == 'Naised') echo 'highlight'; ?>">Naised</div>
-                        <div class="dash">/</div>
-                        <div class="current-gender-out <?php if (get_field('naised_voi_mehed') == 'Mehed') echo 'highlight'; ?>">Mehed</div>
-                    </div>
-
-                    <!-- People counter -->
-                    <div class="col-sm-12 col-lg-4 py-2">
-                        <div class="highlight"><?php the_field('inimesi'); ?></div>
-                        <div class="dash">/</div>
-                        <div class="current-people-max"><?php the_field('kohtade_arv'); ?></div>
-                    </div>
-
-                    <!--Random message -->
-                <?php else : ?>
-                    <div class="col">
-                        <div class="closed-msg"><?php the_field('teade'); ?></div>
-                    </div>
-                <?php endif; ?>
-            </div>
-        </div>
-    </div>
-
-
-
     <!-- LOGO -->
     <div class="logo-bg">
         <div class="container">
@@ -63,21 +23,21 @@
         </div>
     </div>
 
-
-
-
-    <hr class="header-hr">
-
     <!-- NAVIGATION -->
     <header class="sticky-top nav-bg">
         <div class="container">
-
-            <nav class="navbar navbar-expand-md navbar-light" role="navigation">
+            <nav class="navbar navbar-expand-md" role="navigation">
 
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'your-theme-slug'); ?>">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-menu-up" viewBox="0 0 16 16">
+                            <path d="M7.646 15.854a.5.5 0 0 0 .708 0L10.207 14H14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3.793l1.853 1.854zM1 9V6h14v3H1zm14 1v2a1 1 0 0 1-1 1h-3.793a1 1 0 0 0-.707.293l-1.5 1.5-1.5-1.5A1 1 0 0 0 5.793 13H2a1 1 0 0 1-1-1v-2h14zm0-5H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v2zM2 11.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 0-1h-8a.5.5 0 0 0-.5.5zm0-4a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11a.5.5 0 0 0-.5.5zm0-4a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 0-1h-6a.5.5 0 0 0-.5.5z" />
+                        </svg>
+                    </span>
                 </button>
+
+
 
                 <!-- Navigation items -->
                 <?php
@@ -87,7 +47,7 @@
                     'container'         => 'div',
                     'container_class'   => 'collapse navbar-collapse',
                     'container_id'      => 'bs-example-navbar-collapse-1',
-                    'menu_class'        => 'nav navbar-nav mx-auto',
+                    'menu_class'        => 'nav text-uppercase',
                     'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
                     'walker'            => new WP_Bootstrap_Navwalker(),
                 ));
@@ -95,4 +55,3 @@
             </nav>
         </div>
     </header>
-    <hr class="header-hr">
