@@ -13,6 +13,47 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+
+
+
+    <!-- Counter -->
+    <div class="current-information-container">
+        <div class="container">
+            <div class="row p-2">
+                <?php if (get_field('kuva_avatud')) : ?>
+
+                    <!-- Open message -->
+                    <div class=" col-sm-12 col-lg-4 py-2">
+                        <div class="current-open-msg"><?php the_field('avatud_teade'); ?></div>
+                    </div>
+
+                    <!-- Gender information -->
+                    <div class="col-sm-12 col-lg-4 py-2">
+                        <div class="current-gender-in <?php if (get_field('naised_voi_mehed') == 'Naised') echo 'highlight'; ?>">Naised</div>
+                        <div class="dash">/</div>
+                        <div class="current-gender-out <?php if (get_field('naised_voi_mehed') == 'Mehed') echo 'highlight'; ?>">Mehed</div>
+                    </div>
+
+                    <!-- People counter -->
+                    <div class="col-sm-12 col-lg-4 py-2">
+                        <div class="highlight"><?php the_field('inimesi'); ?></div>
+                        <div class="dash">/</div>
+                        <div class="current-people-max"><?php the_field('kohtade_arv'); ?></div>
+                    </div>
+
+                    <!--Random message -->
+                <?php else : ?>
+                    <div class="col">
+                        <div class="closed-msg"><?php the_field('teade'); ?></div>
+                    </div>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
+
+
+
     <!-- LOGO -->
     <div class="logo-bg">
         <div class="container">
@@ -21,6 +62,11 @@
             </a>
         </div>
     </div>
+
+
+
+
+    <hr class="header-hr">
 
     <!-- NAVIGATION -->
     <header class="sticky-top nav-bg">
@@ -41,7 +87,7 @@
                     'container'         => 'div',
                     'container_class'   => 'collapse navbar-collapse',
                     'container_id'      => 'bs-example-navbar-collapse-1',
-                    'menu_class'        => 'nav navbar-nav ml-auto',
+                    'menu_class'        => 'nav navbar-nav mx-auto',
                     'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
                     'walker'            => new WP_Bootstrap_Navwalker(),
                 ));
@@ -49,3 +95,4 @@
             </nav>
         </div>
     </header>
+    <hr class="header-hr">
