@@ -15,7 +15,7 @@ Author: VK-DEV
 }
 
 body {
-    background-image: url('./img/bg-pattern2_mirror.jpg');
+    background-image: url('./img/m1.jpg');
     background-size: 100% 100%;
     background-attachment: fixed;
 
@@ -36,26 +36,35 @@ body {
 
 
 
-
 /***********************************************************************************************************************************************************************/
 /********************************************************************************* Header ******************************************************************************/
 /***********************************************************************************************************************************************************************/
 /* Logo */
 .logo {
-    width: 200px;
-    height: 200px;
+    width: 20rem;
     margin-top: 1rem;
 }
 
-.logo-bg {
-    background-color: var(--color-white);
+
+.center {
+    margin: auto;
 }
+
+.center h1 {
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    font-weight: 900;
+    text-shadow: 5px 5px 5px rgb(155, 150, 150);
+    /* -webkit-text-stroke: 1px rgb(0, 0, 0);    */
+}
+
+
 
 /***********************************************************************************************************************************************************************/
 /* Navigation */
 
 .nav-bg {
-    background-color: var(--color-blue);
+    background-color: var(--color-black);
 }
 
 nav ul {
@@ -63,20 +72,13 @@ nav ul {
 }
 
 nav li {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: bolder;
     letter-spacing: 2px;
-    padding-left: 1rem;
+    padding: .5rem;
 }
 
-nav a {
-    color: var(--color-white);
-}
-
-nav a:hover {
-    color: var(--color-black);
-}
-
+/* Mobile navigation icon */
 .navbar-toggler-icon {
     color: var(--color-white);
 }
@@ -84,8 +86,53 @@ nav a:hover {
 
 
 /***********************************************************************************************************************************************************************/
+/* hover & active effects */
+.navbar-nav .nav-link {
+    /* position: relative; */
+    color: var(--color-white);
+}
 
+/* bottom line effect */
+/* .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    right: 0;
+    background-color: var(--color-yellow);
+    transform-origin: bottom;
+    transition: transform 0.3s ease-out;
+    -webkit-transition: transform 0.3s ease-out;
+} */
 
+/* Hover bottom line */
+/* .navbar-nav .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom;
+    width: 100%;
+} */
+
+/* Active link */
+.navbar-nav .active>.nav-link {
+    color: var(--color-white); 
+    box-shadow: rgba(255, 255, 255, 0.5) 6px 5px 5px;
+    border-radius: 1rem;
+}
+
+/* OnClick */
+.navbar-nav :active>.nav-link {
+    transform: scale(0.9);
+    transition: .2s;
+}
+
+/* Hover */
+.navbar-nav .nav-link:hover {
+    color:var(--color-white);
+    box-shadow: rgba(255, 255, 255, 0.5) 6px 5px 5px;
+    border-radius: 1rem;
+    transition: .2s;
+}
 /***********************************************************************************************************************************************************************/
 /********************************************************************************* front-page.php **********************************************************************/
 /***********************************************************************************************************************************************************************/
@@ -93,10 +140,13 @@ nav a:hover {
 /* Counter */
 .current-information-container {
     text-align: center !important;
-    background-color: var(--color-black);
+    /* background-color: var(--color-black); */
+    background-image: url('./img/counter2.jpg');
+    background-size: 100% 100%;
+    border-radius: 2rem;
     letter-spacing: 2px;
-    border-radius: 20%;
-    padding: 2rem;
+    padding: 1rem;
+
 }
 
 .current-gender-in,
@@ -113,7 +163,6 @@ nav a:hover {
 
 .highlight,
 .closed-msg,
-.broneering-msg,
 .dash {
     color: var(--color-white);
     font-size: 1.5rem;
@@ -121,16 +170,41 @@ nav a:hover {
 
 .current-open-msg {
     font-size: 1.5rem;
-    animation: blinking 1.5s linear infinite;
+  color: green;
+    animation: blinking 1s linear infinite;
 }
 
 @keyframes blinking {
     50% {
         opacity: 0.5;
-        color: green;
     }
 }
 
+/***********************************************************************************************************************************************************************/
+/* Content */
+.fp-desc {
+    padding: 2rem;
+}
+
+.display-inline {
+    display: inline;
+}
+
+.fp-content li {
+    font-size: 1.5rem;   
+    padding-left: 3rem;
+}
+
+
+
+.fp-content p {
+    font-size: 1.5rem;   
+}
+
+
+.fp-content h4 {
+    font-weight: 900;  
+}
 
 
 
@@ -149,7 +223,9 @@ nav a:hover {
 }
 
 footer {
-    background-color: var(--color-black);
+    /* background-color: var(--color-black); */
+    background-image: url('./img/counter4.jpg');
+    background-size: 100% 100%;
     padding-top: 3rem;
 }
 

@@ -15,11 +15,18 @@
 <body <?php body_class(); ?>>
 
     <!-- LOGO -->
-    <div class="logo-bg">
-        <div class="container">
-            <a href="https://www.ylkusaunake.ee">
-                <img class="logo img-fluid" alt="Ylkusaunake logo" src="<?php echo get_template_directory_uri(); ?>/img/ylkusaunake_logo_transparent.png">
-            </a>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-12 col-sm-12 text-center">
+                <a href="https://www.ylkusaunake.ee">
+                    <img class="logo img-fluid" alt="Ylkusaunake logo" src="<?php echo get_template_directory_uri(); ?>/img/ylkusaunake_logo_transparent.png">
+                </a>
+            </div>
+            <div class="col-lg-8  col-md-12 col-sm-12 center text-uppercase text-center">.
+                <h1>Puuküttega Leilisaun</h1>
+                <h1>Ülenurmes</h1>
+            </div>
         </div>
     </div>
 
@@ -47,11 +54,12 @@
                     'container'         => 'div',
                     'container_class'   => 'collapse navbar-collapse',
                     'container_id'      => 'bs-example-navbar-collapse-1',
-                    'menu_class'        => 'nav text-uppercase',
+                    'menu_class'        => 'nav navbar-nav text-uppercase mx-auto',
                     'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
                     'walker'            => new WP_Bootstrap_Navwalker(),
                 ));
                 ?>
             </nav>
         </div>
+
     </header>
