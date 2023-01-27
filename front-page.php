@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="page-content mt-5">
+<div class="page-content my-5">
 
     <!-- Counter -->
 
@@ -37,7 +37,7 @@
 
     <div class="container fp-content mt-5">
         <div class="fp-desc">
-            <h1>Ülenurme Saun kirjeldus</h1>
+            <h1 class="text-center p-5">Ülenurme Saun kirjeldus (coming soon)</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero aspernatur velit cum porro, sequi pariatur! Asperiores harum assumenda eum distinctio consectetur ea dolor excepturi quisquam alias dignissimos ab, eius inventore.</p>
         </div>
         <h2 class="text-center">Teenused</h2>

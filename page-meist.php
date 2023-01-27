@@ -2,14 +2,13 @@
 
 
 <!-- Content -->
-<div class="container page-content">
+<div class="container page-content my-5">
 
 
 
 
 
-<h1>Coming soon</h1>
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum enim nobis porro obcaecati, iure nesciunt assumenda. Fugiat eum necessitatibus rem cupiditate iste, dolore, iusto nihil adipisci cumque nobis nisi minus!</p>
+<h1 class="text-center">Tutvustus (coming soon)</h1>
 
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <?php the_content(); ?>

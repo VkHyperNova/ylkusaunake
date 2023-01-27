@@ -15,7 +15,7 @@ Author: VK-DEV
 }
 
 body {
-    background-image: url('./img/m1.jpg');
+    background-image: url('./img/bg-pattern2_mirror.jpg');
     background-size: 100% 100%;
     background-attachment: fixed;
 
@@ -51,11 +51,12 @@ body {
 }
 
 .center h1 {
-    color: rgb(255, 255, 255);
-    font-size: 3rem;
+    color: rgb(0, 0, 0);
+    font-size: 2.5rem;
     font-weight: 900;
-    text-shadow: 5px 5px 5px rgb(155, 150, 150);
-    /* -webkit-text-stroke: 1px rgb(0, 0, 0);    */
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 2px rgb(189, 178, 178);
+    -webkit-text-stroke: 1px rgb(0, 0, 0);   
 }
 
 
@@ -115,7 +116,7 @@ nav li {
 
 /* Active link */
 .navbar-nav .active>.nav-link {
-    color: var(--color-white); 
+    color: var(--color-white);
     box-shadow: rgba(255, 255, 255, 0.5) 6px 5px 5px;
     border-radius: 1rem;
 }
@@ -128,11 +129,12 @@ nav li {
 
 /* Hover */
 .navbar-nav .nav-link:hover {
-    color:var(--color-white);
+    color: var(--color-white);
     box-shadow: rgba(255, 255, 255, 0.5) 6px 5px 5px;
     border-radius: 1rem;
     transition: .2s;
 }
+
 /***********************************************************************************************************************************************************************/
 /********************************************************************************* front-page.php **********************************************************************/
 /***********************************************************************************************************************************************************************/
@@ -170,7 +172,7 @@ nav li {
 
 .current-open-msg {
     font-size: 1.5rem;
-  color: green;
+    color: green;
     animation: blinking 1s linear infinite;
 }
 
@@ -191,19 +193,19 @@ nav li {
 }
 
 .fp-content li {
-    font-size: 1.5rem;   
+    font-size: 1.5rem;
     padding-left: 3rem;
 }
 
 
 
 .fp-content p {
-    font-size: 1.5rem;   
+    font-size: 1.5rem;
 }
 
 
 .fp-content h4 {
-    font-weight: 900;  
+    font-weight: 900;
 }
 
 
@@ -263,7 +265,7 @@ footer {
 .footer-copyright span {
     letter-spacing: 2px;
     font-weight: bold;
-    color: var(--color-grey);
+    color: var(--color-white);
 }
 
 .footer-copyright a {

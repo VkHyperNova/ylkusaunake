@@ -16,7 +16,7 @@
         </div>
     </div>
 
-    <hr class="red-hr">
+  
     <!-- Copyright -->
 
     <div class="footer-copyright container-fluid">
