@@ -23,9 +23,27 @@
                     <img class="logo img-fluid" alt="Ylkusaunake logo" src="<?php echo get_template_directory_uri(); ?>/img/ylkusaunake_logo_transparent.png">
                 </a>
             </div>
-            <div class="col-lg-8  col-md-12 col-sm-12 center text-uppercase text-center">.
-                <h1>Puuküttega Leilisaun</h1>
+            <div class="col-lg-8 col-md-12 col-sm-12 header-main-msg">
+                <h3>Puuküttega Leilisaun</h3>
                 <h1>Ülenurmes</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Teenused -->
+    <div class="header-teenused container-fluid">
+        <div class="row">
+            <div class="col-lg-3">
+                <h4>Meeste-ja naistesaunad</h4>
+            </div>
+            <div class="col-lg-3">
+                <h4>Peresaunad</h4>
+            </div>
+            <div class="col-lg-3">
+                <h4>Sauna rent</h4>
+            </div>
+            <div class="col-lg-3">
+                <h4>Peod ja sünnipäevad</h4>
             </div>
         </div>
     </div>

@@ -32,6 +32,21 @@ body {
 
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: 1px;
+    font-weight: bolder;
+}
+
+p,
+li {
+    letter-spacing: 1px;
+    font-weight: bolder;
+}
 
 
 
@@ -45,20 +60,40 @@ body {
     margin-top: 1rem;
 }
 
-
-.center {
-    margin: auto;
+/* Main Message */
+.header-main-msg {
+    margin: auto;   
 }
 
-.center h1 {
-    color: rgb(0, 0, 0);
-    font-size: 2.5rem;
-    font-weight: 900;
-    letter-spacing: 4px;
-    text-shadow: 2px 2px 2px rgb(189, 178, 178);
-    -webkit-text-stroke: 1px rgb(0, 0, 0);   
+.header-main-msg h1, h3 {
+    color: rgb(0, 0, 0, 0.7);
+    letter-spacing: 3px;
+    text-shadow: 7px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
+.header-main-msg h1 {
+    float: right;
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+
+.header-main-msg h3 {
+    text-align: center;
+}
+
+/***********************************************************************************************************************************************************************/
+/* Header Teenused row */
+.header-teenused {
+    background-color: var(--color-white);
+    text-align: center !important;
+    padding: 1.5rem;
+}
+
+.header-teenused h4 {
+    color: rgba(0,0,0,0.5);
+    letter-spacing: 2px;
+    text-shadow: 7px 5px 5px rgba(0, 0, 0, 0.1);
+}
 
 
 /***********************************************************************************************************************************************************************/
@@ -89,30 +124,8 @@ nav li {
 /***********************************************************************************************************************************************************************/
 /* hover & active effects */
 .navbar-nav .nav-link {
-    /* position: relative; */
     color: var(--color-white);
 }
-
-/* bottom line effect */
-/* .navbar-nav .nav-link::after {
-    content: '';
-    position: absolute;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    right: 0;
-    background-color: var(--color-yellow);
-    transform-origin: bottom;
-    transition: transform 0.3s ease-out;
-    -webkit-transition: transform 0.3s ease-out;
-} */
-
-/* Hover bottom line */
-/* .navbar-nav .nav-link:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom;
-    width: 100%;
-} */
 
 /* Active link */
 .navbar-nav .active>.nav-link {
@@ -136,47 +149,66 @@ nav li {
 }
 
 /***********************************************************************************************************************************************************************/
+/* Fade-in effect */
+.logo, .header-main-msg, .header-teenused, header {
+    animation: fade-in .5s;
+}
+
+
+.page-content {
+    animation: fade-in 1s backwards .1s;
+}
+
+/* Keyframes */
+@keyframes fade-in {
+    0%  {
+        opacity: 0;
+    }
+}
+
+
+/***********************************************************************************************************************************************************************/
 /********************************************************************************* front-page.php **********************************************************************/
 /***********************************************************************************************************************************************************************/
 
 /* Counter */
-.current-information-container {
+.counter-information-container {
     text-align: center !important;
-    /* background-color: var(--color-black); */
     background-image: url('./img/counter2.jpg');
     background-size: 100% 100%;
     border-radius: 2rem;
     letter-spacing: 2px;
     padding: 1rem;
+    
 
 }
 
-.current-gender-in,
-.dash,
-.current-gender-out,
-.current-open-msg,
-.current-people-max,
-.highlight {
+.counter-gender-in,
+.counter-dash,
+.counter-gender-out,
+.counter-open-msg,
+.counter-people-max,
+.counter-highlight {
     display: inline;
     font-weight: bolder;
     color: var(--color-grey);
     font-size: 1rem;
 }
 
-.highlight,
-.closed-msg,
-.dash {
+.counter-highlight,
+.counter-closed-msg,
+.counter-dash {
     color: var(--color-white);
     font-size: 1.5rem;
 }
 
-.current-open-msg {
+.counter-open-msg {
     font-size: 1.5rem;
     color: green;
-    animation: blinking 1s linear infinite;
+    animation: counter-blinking 1s linear infinite;
 }
 
-@keyframes blinking {
+@keyframes counter-blinking {
     50% {
         opacity: 0.5;
     }
