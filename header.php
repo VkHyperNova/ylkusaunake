@@ -14,18 +14,25 @@
 
 <body <?php body_class(); ?>>
 
+<!-- Header page id !!!IMPORTANT!!!! -->
+<?php $pageid = 201 ?>
+
+
     <!-- LOGO -->
 
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-12 col-sm-12 text-center">
                 <a href="https://www.ylkusaunake.ee">
-                    <img class="logo img-fluid" alt="Ylkusaunake logo" src="<?php echo get_template_directory_uri(); ?>/img/ylkusaunake_logo_transparent.png">
+                    <!--  <img class="logo img-fluid" alt="Ylkusaunake logo" src="<?php echo get_template_directory_uri(); ?>/img/ylkusaunake_logo_transparent.png"> -->
+                    <?php if (get_field('logo', $pageid)) : ?>
+                        <img class="logo img-fluid" src="<?php the_field('logo', $pageid); ?>" />
+                    <?php endif; ?>
                 </a>
             </div>
             <div class="col-lg-8 col-md-12 col-sm-12 header-main-msg">
-                <h3>Puuküttega Leilisaun</h3>
-                <h1>Ülenurmes</h1>
+                <h3><?php the_field('sauna_kirjeldus', $pageid); ?></h3>
+                <h1><?php the_field('sauna_asukoht', $pageid); ?></h1>
             </div>
         </div>
     </div>
@@ -33,18 +40,11 @@
     <!-- Teenused -->
     <div class="header-teenused container-fluid">
         <div class="row">
-            <div class="col-lg-3">
-                <h4>Meeste-ja naistesaunad</h4>
-            </div>
-            <div class="col-lg-3">
-                <h4>Peresaunad</h4>
-            </div>
-            <div class="col-lg-3">
-                <h4>Sauna rent</h4>
-            </div>
-            <div class="col-lg-3">
-                <h4>Peod ja sünnipäevad</h4>
-            </div>
+            <?php for ($x = 1; $x <= 4; $x += 1) { ?>
+                <div class="col-lg-3">
+                    <h4><?php the_field('teenus_' .$x , $pageid); ?></h4>
+                </div>
+            <?php } ?>
         </div>
     </div>
 

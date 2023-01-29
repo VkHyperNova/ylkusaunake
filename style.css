@@ -124,27 +124,29 @@ nav li {
 /***********************************************************************************************************************************************************************/
 /* hover & active effects */
 .navbar-nav .nav-link {
-    color: var(--color-white);
+    color: var(--color-grey);
 }
 
 /* Active link */
 .navbar-nav .active>.nav-link {
     color: var(--color-white);
-    box-shadow: rgba(255, 255, 255, 0.5) 6px 5px 5px;
+    box-shadow: rgb(255, 255, 255) 6px 5px 5px;
     border-radius: 1rem;
 }
 
 /* OnClick */
 .navbar-nav :active>.nav-link {
     transform: scale(0.9);
+    box-shadow: rgba(255, 255, 255, 0.5) 6px 5px 5px;
+    border-radius: 1rem;
     transition: .2s;
 }
 
 /* Hover */
 .navbar-nav .nav-link:hover {
     color: var(--color-white);
-    box-shadow: rgba(255, 255, 255, 0.5) 6px 5px 5px;
-    border-radius: 1rem;
+    /* box-shadow: rgba(255, 255, 255, 0.5) 6px 5px 5px;
+    border-radius: 1rem; */
     transition: .2s;
 }
 
@@ -153,7 +155,6 @@ nav li {
 .logo, .header-main-msg, .header-teenused, header {
     animation: fade-in .5s;
 }
-
 
 .page-content {
     animation: fade-in 1s backwards .1s;
@@ -179,8 +180,6 @@ nav li {
     border-radius: 2rem;
     letter-spacing: 2px;
     padding: 1rem;
-    
-
 }
 
 .counter-gender-in,
