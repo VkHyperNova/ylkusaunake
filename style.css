@@ -29,6 +29,7 @@ body {
     --color-cyan: rgb(0, 255, 191);
     --color-yellow: rgb(229, 255, 0);
     --color-vk-dev: rgba(106, 116, 106, 0.4);
+    --color-main-text: rgb(0, 0, 0, 0.7);
 
 }
 
@@ -48,6 +49,15 @@ li {
     font-weight: bolder;
 }
 
+.glass-container {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.6px);
+    -webkit-backdrop-filter: blur(3.6px);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
 
 
 
@@ -62,11 +72,12 @@ li {
 
 /* Main Message */
 .header-main-msg {
-    margin: auto;   
+    margin: auto;
 }
 
-.header-main-msg h1, h3 {
-    color: rgb(0, 0, 0, 0.7);
+.header-main-msg h1,
+h4 {
+    color: var(--color-main-text);
     letter-spacing: 3px;
     text-shadow: 7px 5px 5px rgba(0, 0, 0, 0.1);
 }
@@ -77,8 +88,9 @@ li {
     text-transform: uppercase;
 }
 
-.header-main-msg h3 {
+.header-main-msg h4 {
     text-align: center;
+    text-transform: uppercase;
 }
 
 /***********************************************************************************************************************************************************************/
@@ -90,7 +102,7 @@ li {
 }
 
 .header-teenused h4 {
-    color: rgba(0,0,0,0.5);
+    color: rgba(0, 0, 0, 0.5);
     letter-spacing: 2px;
     text-shadow: 7px 5px 5px rgba(0, 0, 0, 0.1);
 }
@@ -136,10 +148,10 @@ nav li {
 
 /* OnClick */
 .navbar-nav :active>.nav-link {
-    transform: scale(0.9);
+    transform: scale(1.1);
     box-shadow: rgba(255, 255, 255, 0.5) 6px 5px 5px;
     border-radius: 1rem;
-    transition: .2s;
+    transition: 2s;
 }
 
 /* Hover */
@@ -152,7 +164,10 @@ nav li {
 
 /***********************************************************************************************************************************************************************/
 /* Fade-in effect */
-.logo, .header-main-msg, .header-teenused, header {
+.logo,
+.header-main-msg,
+.header-teenused,
+header {
     animation: fade-in .5s;
 }
 
@@ -162,7 +177,7 @@ nav li {
 
 /* Keyframes */
 @keyframes fade-in {
-    0%  {
+    0% {
         opacity: 0;
     }
 }
@@ -195,7 +210,6 @@ nav li {
 }
 
 .counter-highlight,
-.counter-closed-msg,
 .counter-dash {
     color: var(--color-white);
     font-size: 1.5rem;
@@ -213,30 +227,54 @@ nav li {
     }
 }
 
+.random-msg {
+    font-size: 1.5rem;
+    color: var(--color-white);
+    font-weight: bolder;
+    letter-spacing: 3px;
+    
+    
+}
+
 /***********************************************************************************************************************************************************************/
 /* Content */
-.fp-desc {
+.avaleht-content {
+    border-radius: 2rem;
+    color: var(--color-main-text);
+    text-shadow: 7px 5px 5px rgba(0, 0, 0, 0.1);
+    font-weight: bolder;
+}
+
+.avaleht-content h1,
+h3 {
     padding: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    
 }
 
-.display-inline {
-    display: inline;
+.avaleht-content h5 {
+    text-transform: capitalize;
+    letter-spacing: 1px;  
 }
 
-.fp-content li {
-    font-size: 1.5rem;
-    padding-left: 3rem;
+.broneerige-message p {
+    color: var(--color-black_2);
+    letter-spacing: 2px !important;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.avaleht-content span {
+    color: red;
 }
 
 
-
-.fp-content p {
-    font-size: 1.5rem;
-}
-
-
-.fp-content h4 {
-    font-weight: 900;
+/* News */
+.news-container h2 {
+    margin: 2rem;
 }
 
 
@@ -247,7 +285,7 @@ nav li {
 /********************************************************************************* Footer ******************************************************************************/
 /***********************************************************************************************************************************************************************/
 .page-content {
-    min-height: 80vh;
+    min-height: 80vh;    
 }
 
 .red-hr {

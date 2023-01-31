@@ -31,7 +31,7 @@
                 </a>
             </div>
             <div class="col-lg-8 col-md-12 col-sm-12 header-main-msg">
-                <h3><?php the_field('sauna_kirjeldus', $pageid); ?></h3>
+                <h4><?php the_field('sauna_kirjeldus', $pageid); ?></h4>
                 <h1><?php the_field('sauna_asukoht', $pageid); ?></h1>
             </div>
         </div>

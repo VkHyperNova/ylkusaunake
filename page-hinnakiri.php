@@ -4,7 +4,7 @@
 <!-- Content -->
 <div class="container page-content my-5">
 
-<h1 class="text-center">Broneeringu info (coming soon)</h1>
+<h1 class="text-center">Hinnakiri info (coming soon)</h1>
 
 
 
