@@ -49,8 +49,12 @@ li {
     font-weight: bolder;
 }
 
+img {
+    max-height: 800px;
+    padding: 2rem;
+}
+
 .glass-container {
-    /* From https://css.glass */
     background: rgba(255, 255, 255, 0.5);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -102,9 +106,8 @@ h4 {
 }
 
 .header-teenused h4 {
-    color: rgba(0, 0, 0, 0.5);
+    color: var(--color-blue);
     letter-spacing: 2px;
-    text-shadow: 7px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -148,17 +151,13 @@ nav li {
 
 /* OnClick */
 .navbar-nav :active>.nav-link {
-    transform: scale(1.1);
-    box-shadow: rgba(255, 255, 255, 0.5) 6px 5px 5px;
-    border-radius: 1rem;
-    transition: 2s;
+    transform: scale(0.9);
+    transition: .2s;
 }
 
 /* Hover */
 .navbar-nav .nav-link:hover {
     color: var(--color-white);
-    /* box-shadow: rgba(255, 255, 255, 0.5) 6px 5px 5px;
-    border-radius: 1rem; */
     transition: .2s;
 }
 
@@ -232,8 +231,8 @@ header {
     color: var(--color-white);
     font-weight: bolder;
     letter-spacing: 3px;
-    
-    
+
+
 }
 
 /***********************************************************************************************************************************************************************/
@@ -241,42 +240,49 @@ header {
 .avaleht-content {
     border-radius: 2rem;
     color: var(--color-main-text);
-    text-shadow: 7px 5px 5px rgba(0, 0, 0, 0.1);
     font-weight: bolder;
 }
 
-.avaleht-content h1,
-h3 {
+.avaleht-header {
     padding: 2rem;
     text-transform: uppercase;
-    letter-spacing: 3px;
-    
+    letter-spacing: 2px;
+    color: var(--color-blue);
 }
 
 .avaleht-content h5 {
     text-transform: capitalize;
-    letter-spacing: 1px;  
+    letter-spacing: 2px;
 }
 
-.broneerige-message p {
-    color: var(--color-black_2);
-    letter-spacing: 2px !important;
+.broneerige-message {
+    color: black;
+    letter-spacing: 1px !important;
 }
 
 .no-margin {
     margin: 0;
 }
 
-.avaleht-content span {
-    color: red;
-}
+
 
 
 /* News */
-.news-container h2 {
-    margin: 2rem;
+.news-container {
+    height: 20rem;
+    overflow: auto;
+    padding: 1rem;
 }
 
+.news-date {
+    color: var(--color-grey);
+}
+
+.news-content-container {
+    background-color: var(--color-white);
+    border-radius: 1rem;
+    color: var(--color-main-text);
+}
 
 
 
@@ -285,7 +291,7 @@ h3 {
 /********************************************************************************* Footer ******************************************************************************/
 /***********************************************************************************************************************************************************************/
 .page-content {
-    min-height: 80vh;    
+    min-height: 80vh;
 }
 
 .red-hr {

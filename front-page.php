@@ -42,85 +42,74 @@
 
         <!-- AVALEHT CONTENT -->
         <div class="avaleht-content my-5">
-
-
             <!-- Lahtioleku ajad -->
             <div class="glass-container text-center">
-                <h3>Saun on avatud iga <span>Laupäev</span></h3>
+                <h3 class="avaleht-header">Saun on avatud iga Laupäev</h3>
 
                 <hr>
 
-                <div class="row p-5">
+                <div class="row p-2">
                     <div class="col">
-                        <h5><span>14:00</span>-16:30 Naised</h5>
+                        <h5>14:00-16:30 Naised</h5>
                     </div>
                     <div class="col">
-                        <h5>16:30-<span>20:00</span> Mehed</h5>
+                        <h5>16:30-20:00 Mehed</h5>
                     </div>
                 </div>
+
+                <h5>Hind: 5 EUR</h5>
 
                 <hr>
 
                 <!-- Broneeri -->
-                <div class="broneerige-message">
-                    <p>Broneerimine <span></span> (E-R & P) - Lisainfo +372 5303 9838 </p>
-                </div>
-            </div><!-- glass-container end -->
 
+                <p class="broneerige-message">Broneerimine (E-R & P) - Lisainfo +372 5303 9838 </p>
+
+            </div><!-- glass-container end -->
+            
             <!-- Uudised -->
-            <div class="news-container my-5">
-                <h2>Viimased Uudised</h2>
+            <div class="news my-5">
+                <h4 class="avaleht-header">Viimased Uudised</h4>
 
 
 
                 <?php $lastposts = get_posts(array('posts_per_page' => 3)); ?>
-
-
-
-
-
                 <div class="row">
-                <?php if ($lastposts) {
-                    foreach ($lastposts as $post) : setup_postdata($post); ?>
-                        
+                    <?php if ($lastposts) {
+                        foreach ($lastposts as $post) : setup_postdata($post); ?>
+
                             <div class="col-lg-4">
-                                <div class="glass-container text-center my-5">
-                                    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                                    <p><?php the_author(); ?></p>
-                                    <p><?php echo get_the_date(); ?></p>
-                                    <p><?php the_excerpt(); ?></p>
+                                <div class="news-container glass-container text-center">
+
+                                    <p class="news-date"><?php echo get_the_date(); ?></p>
+                                    <hr>
+                                    <a href="<?php the_permalink() ?>">
+                                        <h5 class="avaleht-header"><?php the_title(); ?></h5>
+                                    </a>
+                                    <!-- <p><?php the_author(); ?></p> -->
+
+
+                                    <!-- Display limited content -->
+                                    <?php
+                                    $char_limit = 100; //character limit
+                                    $content = $post->post_content; //contents saved in a variable
+                                    echo substr(strip_tags($content), 0, $char_limit);
+                                    echo '...';
+
+                                    ?>
+                                    <a href="<?php the_permalink() ?>">Loe edasi</a>
                                 </div>
                             </div>
-                        </div>
-
-                    <?php endforeach; ?>
-                <?php wp_reset_postdata();
-                } ?>
-
-                <div class="row">
-                    <div class="col">1</div>
-                    <div class="col">2</div>
-                    <div class="col">3</div>
+                        <?php endforeach; ?>
+                        <?php wp_reset_postdata(); ?>
+                    <?php } ?>
                 </div>
-
-
-
-            </div>
+            </div> <!-- news-container end -->
 
 
 
 
         </div><!-- avaleht-content end -->
-
-
-
-
-
-
-
-
-
-
     </div><!--  page-content end -->
 </div><!--  container end -->
 
