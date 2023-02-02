@@ -11,7 +11,6 @@ Author: VK-DEV
 * {
     margin: 0;
     padding: 0;
-    font-family: Georgia;
 }
 
 body {
@@ -19,18 +18,17 @@ body {
     background-size: 100% 100%;
     background-attachment: fixed;
 
-    /* colors */
+    /* vars */
     --color-black: rgb(31, 30, 30);
     --color-black_2: rgba(0, 0, 0, 0.753);
     --color-white: rgb(255, 255, 255);
     --color-grey: rgb(168, 167, 167);
-    --color-blue: rgb(76, 117, 153);
+    --color-light-blue: rgb(76, 117, 153);
     --color-red: rgb(255, 0, 0, 0.5);
     --color-cyan: rgb(0, 255, 191);
     --color-yellow: rgb(229, 255, 0);
     --color-vk-dev: rgba(106, 116, 106, 0.4);
-    --color-main-text: rgb(0, 0, 0, 0.7);
-
+    --color-main-black: rgb(0, 0, 0, 0.7);
 }
 
 h1,
@@ -38,24 +36,76 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-    letter-spacing: 1px;
-    font-weight: bolder;
-}
-
+h6,
 p,
 li {
+    font-family: Georgia;
     letter-spacing: 1px;
     font-weight: bolder;
+    color: var(--color-main-black);
+    text-shadow: 7px 5px 5px rgb(0 0 0 / 10%);
 }
+
 
 img {
     max-height: 800px;
     padding: 2rem;
 }
 
+/* Logo */
+.logo {
+    width: 20rem;
+    margin-top: 1rem;
+}
+
+
+/* colors */
+
+.color-white {
+    color: var(--color-white) !important;
+}
+
+.color-blue {
+    color: var(--color-light-blue)!important;
+}
+
+.color-grey {
+    color: var(--color-grey)!important;
+}
+
+/* bg colors */
+.bg-black {
+    background-color: var(--color-black)!important;
+}
+
+/* letter-spacing */
+
+.spacing-1 {
+    letter-spacing: 1px!important;
+}
+
+.spacing-2 {
+    letter-spacing: 2px!important;
+}
+
+.spacing-3 {
+    letter-spacing: 3px!important;
+}
+
+.spacing-4 {
+    letter-spacing: 4px!important;
+}
+
+.spacing-5 {
+    letter-spacing: 5px!important;
+}
+
+/* font-size */
+
+
+/* containers */
 .glass-container {
-    background: rgba(255, 255, 255, 0.5);
+    /* background: rgba(255, 255, 255, 0.5); */
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(3.6px);
@@ -63,77 +113,28 @@ img {
     border: 1px solid rgba(255, 255, 255, 1);
 }
 
-
-
 /***********************************************************************************************************************************************************************/
 /********************************************************************************* Header ******************************************************************************/
 /***********************************************************************************************************************************************************************/
-/* Logo */
-.logo {
-    width: 20rem;
-    margin-top: 1rem;
-}
 
-/* Main Message */
-.header-main-msg {
-    margin: auto;
-}
 
-.header-main-msg h1,
-h4 {
-    color: var(--color-main-text);
-    letter-spacing: 3px;
-    text-shadow: 7px 5px 5px rgba(0, 0, 0, 0.1);
-}
 
-.header-main-msg h1 {
-    float: right;
-    margin-top: 1rem;
-    text-transform: uppercase;
-}
 
-.header-main-msg h4 {
-    text-align: center;
-    text-transform: uppercase;
-}
 
-/***********************************************************************************************************************************************************************/
-/* Header Teenused row */
-.header-teenused {
-    background-color: var(--color-white);
-    text-align: center !important;
-    padding: 1.5rem;
-}
 
-.header-teenused h4 {
-    color: var(--color-blue);
-    letter-spacing: 2px;
-}
+
+
+
 
 
 /***********************************************************************************************************************************************************************/
 /* Navigation */
 
-.nav-bg {
-    background-color: var(--color-black);
-}
-
-nav ul {
-    margin-left: auto !important;
-}
-
 nav li {
     font-size: 1.2rem;
-    font-weight: bolder;
     letter-spacing: 2px;
     padding: .5rem;
 }
-
-/* Mobile navigation icon */
-.navbar-toggler-icon {
-    color: var(--color-white);
-}
-
 
 
 /***********************************************************************************************************************************************************************/
@@ -163,14 +164,11 @@ nav li {
 
 /***********************************************************************************************************************************************************************/
 /* Fade-in effect */
-.logo,
-.header-main-msg,
-.header-teenused,
-header {
+html {
     animation: fade-in .5s;
 }
 
-.page-content {
+.page-content, nav {
     animation: fade-in 1s backwards .1s;
 }
 
@@ -231,38 +229,14 @@ header {
     color: var(--color-white);
     font-weight: bolder;
     letter-spacing: 3px;
-
-
 }
 
 /***********************************************************************************************************************************************************************/
 /* Content */
-.avaleht-content {
-    border-radius: 2rem;
-    color: var(--color-main-text);
-    font-weight: bolder;
-}
 
-.avaleht-header {
-    padding: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--color-blue);
-}
 
-.avaleht-content h5 {
-    text-transform: capitalize;
-    letter-spacing: 2px;
-}
 
-.broneerige-message {
-    color: black;
-    letter-spacing: 1px !important;
-}
 
-.no-margin {
-    margin: 0;
-}
 
 
 
@@ -272,17 +246,12 @@ header {
     height: 20rem;
     overflow: auto;
     padding: 1rem;
+    width: 400px;
 }
 
-.news-date {
-    color: var(--color-grey);
-}
 
-.news-content-container {
-    background-color: var(--color-white);
-    border-radius: 1rem;
-    color: var(--color-main-text);
-}
+
+
 
 
 
@@ -294,10 +263,6 @@ header {
     min-height: 80vh;
 }
 
-.red-hr {
-    border: 1px solid red;
-    margin: 0;
-}
 
 footer {
     /* background-color: var(--color-black); */
@@ -324,7 +289,6 @@ footer {
 
 .footer-logo {
     width: 10rem;
-
 }
 
 
