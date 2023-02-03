@@ -33,14 +33,14 @@
 
             <!-- Header Message -->
             <div class="col-lg-8 col-md-12 col-sm-12 m-auto">
-                <h4 class="spacing-3 text-uppercase text-center"><?php the_field('sauna_kirjeldus', $pageid); ?></h4>
-                <h1 class="spacing-3 text-uppercase float-right"><?php the_field('sauna_asukoht', $pageid); ?></h1>
+                <h4 class="spacing-3 text-uppercase font-italic text-center"><?php the_field('sauna_kirjeldus', $pageid); ?></h4>
+                <h1 class="spacing-3 text-uppercase font-weight-bold font-italic text-right"><?php the_field('sauna_asukoht', $pageid); ?></h1>
             </div>
         </div>
     </div>
 
     <!-- Teenused -->
-    <div class="container-fluid bg-light text-center p-3">
+    <!-- <div class="container-fluid text-center p-3">
         <div class="row">
             <?php for ($x = 1; $x <= 4; $x += 1) { ?>
                 <div class="col-lg-3">
@@ -48,7 +48,7 @@
                 </div>
             <?php } ?>
         </div>
-    </div>
+    </div> -->
 
     <!-- NAVIGATION -->
     <header class="sticky-top bg-black">
@@ -74,7 +74,7 @@
                     'container'         => 'div',
                     'container_class'   => 'collapse navbar-collapse',
                     'container_id'      => 'bs-example-navbar-collapse-1',
-                    'menu_class'        => 'nav navbar-nav text-uppercase mx-auto',
+                    'menu_class'        => 'nav navbar-nav  text-uppercase mx-auto',
                     'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
                     'walker'            => new WP_Bootstrap_Navwalker(),
                 ));

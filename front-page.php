@@ -1,11 +1,23 @@
 <?php get_header(); ?>
 
+<?php $pageid = 201 ?>
+
+<div class="container-fluid bg-light text-center p-3">
+    <div class="row">
+        <?php for ($x = 1; $x <= 4; $x += 1) { ?>
+            <div class="col-lg-3">
+                <h4 class="text-muted font-italic spacing-2"><?php the_field('teenus_' . $x, $pageid); ?></h4>
+            </div>
+        <?php } ?>
+    </div>
+</div>
+
 <div class="page-content my-5">
 
     <!-- Counter -->
 
     <?php if (get_field('people_counter_onoff')) : ?>
-        <div class="container">
+        <div class="container my-5">
             <div class="counter-information-container">
                 <div class="row p-2">
                     <!-- Open message -->
@@ -33,7 +45,7 @@
 
         <!--Random message -->
     <?php elseif (get_field('random_message_onoff')) : ?>
-        <div class="container">
+        <div class="container my-5">
             <div class="counter-information-container">
                 <div class="row p-2">
                     <div class="col">
@@ -45,102 +57,115 @@
     <?php endif; ?>
 
 
+
+
     <!-- AVALEHT CONTENT -->
-    <div class="container my-5">
+    <div class="container-fluid py-5">
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <!-- Main column -->
+            <div class="col">
 
-        <!-- Lahtioleku ajad -->
-        <div class="glass-container text-center">
-
-            <!-- Main Message -->
-            <h4 class="color-blue spacing-2 text-uppercase py-5"><?php the_field('main_message'); ?></h4>
-            <hr>
-            <div class="row p-2">
-                <div class="col">
-                    <h4>Naised</h4>
-                    <h5><?php the_field('naiste_aeg'); ?></h5>
-                </div>
-                <div class="col">
-                    <h4>Mehed</h4>
-                    <h5><?php the_field('meeste_aeg'); ?></h5>
-                </div>
-            </div>
-
-            <?php if (get_field('naita_tavasauna_hinda_onoff')) : ?>
-                <hr>
-                <p class="color-blue">Hind: <?php the_field('tavasauna_hind'); ?> EUR</p>
-            <?php endif ?>
-
-        </div><!-- glass-container end -->
-    </div><!--  container end -->
-
-    <!-- Broneerimine -->
-    <div class="container">
-        <div class="glass-container my-5 text-center">
-            <h4 class="color-blue spacing-2 text-uppercase py-5"><?php the_field('broneerise_info'); ?></h4>
-            <hr>
-            <div class="row p-5">
-                <div class="col">
-                    <h5><?php the_field('kontakt_telefon'); ?></h5>
+                <!-- Main Message -->
+                <h4 class="spacing-2 text-capitalize font-weight-bold "><?php the_field('main_message'); ?></h4>
+                <hr style="width: 45%;">
+                <div class="row p-5 ">
+                    <div class="col">
+                        <h4 class="text-secondary">Naised</h4>
+                        <h5 class="text-secondary"><?php the_field('naiste_aeg'); ?></h5>
+                    </div>
+                    <div class="col">
+                        <h4 class="text-secondary">Mehed</h4>
+                        <h5 class="text-secondary"><?php the_field('meeste_aeg'); ?></h5>
+                    </div>
                 </div>
 
-                <div class="col">
-                    <h5><?php the_field('kontakt_email'); ?></h5>
+                <!-- Price -->
+                <div class="row my-2">
+                    <div class="col">
+                        <?php if (get_field('naita_tavasauna_hinda_onoff')) : ?>
+                            <hr>
+                            <p class="text-secondary font-weight-bold text-right">Hind: <?php the_field('tavasauna_hind'); ?> EUR</p>
+                        <?php endif ?>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Broneerimis hind -->
-            <?php if (get_field('naita_broneerimis_hinda_onoff')) : ?>
-                <hr>
-                <p class="color-blue">Hind: <?php the_field('broneerimis_hind'); ?> EUR/Tund</p>
-            <?php endif ?>
-        </div>
-    </div>
-    <!-- Uudised -->
 
-    <div class="container-fluid">
-        <div class="news my-5">
-            <h4 class="color-blue p-5 text-uppercase">Viimased Uudised</h4>
-            <div class="row">
 
-                <?php $lastposts = get_posts(array('posts_per_page' => 4)); ?>
-                <?php if ($lastposts) {
-                    foreach ($lastposts as $post) : setup_postdata($post); ?>
+                <!-- Broneerimine -->
+                <div class="row my-5">
+                    <div class="col">
+                        <h4 class="spacing-2 text-capitalize font-weight-bold"><?php the_field('broneerise_info'); ?></h4>
+                        <hr style="width: 45%;">
+                        <h5 class="text-secondary  px-5 pt-5"><?php the_field('kontakt_telefon'); ?></h5>
+                        <h5 class="text-secondary  px-5"><?php the_field('kontakt_email'); ?></h5>
+                    </div>
+                </div>
 
-                        <div class="col m-3">
-                            <div class="d-flex justify-content-center">
-                                <div class="news-container glass-container text-center">
-                                    <p class="color-blue"><?php echo get_the_date(); ?></p>
-                                    <hr>
-                                    <a href="<?php the_permalink() ?>">
-                                        <h5 class="p-4"><?php the_title(); ?></h5>
-                                    </a>
+                <!-- Broneerimis hind -->
+                <?php if (get_field('naita_broneerimis_hinda_onoff')) : ?>
+                    <hr>
+                    <p class="text-secondary font-weight-bold text-right">Hind: <?php the_field('broneerimis_hind'); ?> EUR/Tund</p>
+                <?php endif ?>
 
-                                    <!-- Display limited content -->
-                                    <?php
-                                    $char_limit = 100; //character limit
-                                    $content = $post->post_content; //contents saved in a variable
-                                    echo substr(strip_tags($content), 0, $char_limit);
-                                    echo '...';
 
-                                    ?>
-                                    <a href="<?php the_permalink() ?>">Loe edasi</a>
-                                </div>
+                <!-- Asukoht -->
+                <div class="row my-5">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">
+                                <h4 class="spacing-2 text-capitalize font-weight-bold">Asukoht</h4>
+                                <hr style="width: 25%;">
                             </div>
                         </div>
-                    <?php endforeach; ?>
-                    <?php wp_reset_postdata(); ?>
-                <?php } ?>
+                        <div class="box-shadow-1 my-5">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2095.5975121683023!2d26.722057816115733!3d58.315846098904665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eb3a0f7a60a9d1%3A0xf31a787ed1c7c89f!2sPargi%207a%2C%20%C3%9Clenurme%2C%2061714%20Tartu%20maakond!5e0!3m2!1sen!2see!4v1674840659985!5m2!1sen!2see" width="800" height="450" style="border: 0px; " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div> <!-- news end -->
+
+
+            <!-- News column -->
+            <div class="col">
+                <div class="news my-5">
+                    <h4 class="color-blue text-uppercase text-center">Viimased Uudised</h4>
+                    <div class="row">
+
+                        <?php $lastposts = get_posts(array('posts_per_page' => 3)); ?>
+                        <?php if ($lastposts) {
+                            foreach ($lastposts as $post) : setup_postdata($post); ?>
+
+                                <div class="col m-3">
+                                    <div class="d-flex justify-content-center">
+                                        <div class="news-container glass-container text-center">
+                                            <p class="text-muted font-weight-bold"><?php echo get_the_date(); ?></p>
+                                            <hr>
+                                            <a href="<?php the_permalink() ?>">
+                                                <h5 class="p-4 font-weight-bold color-blue"><?php the_title(); ?></h5>
+                                            </a>
+
+                                            <!-- Display limited content -->
+                                            <?php
+                                            $char_limit = 100; //character limit
+                                            $content = $post->post_content; //contents saved in a variable
+                                            echo '<p>';
+                                            echo substr(strip_tags($content), 0, $char_limit);
+                                            echo '...</p>';
+
+                                            ?>
+                                            <a class="font-weight-bold text-secondary" href="<?php the_permalink() ?>">Loe edasi</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                            <?php wp_reset_postdata(); ?>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div><!--  container-fluid end -->
-
-
-
-
-
 </div><!--  page-content end -->
-
-
-
 
 <?php get_footer(); ?>
