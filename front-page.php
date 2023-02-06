@@ -17,44 +17,49 @@
 
     <!-- Counter -->
 
-    <?php if (get_field('people_counter_onoff')) : ?>
+    <?php if (get_field('people_counter')['people_counter_onoff']) : ?>
         <div class="container my-5">
-            <div class="counter-information-container">
+            <div class="people-counter-container">
                 <div class="row p-2">
                     <!-- Open message -->
                     <div class="col-sm-12 col-lg-4 py-2">
-                        <div class="counter-open-msg"><?php the_field('avatud_teade'); ?></div>
+                        <div class="counter-open-msg"><?php echo get_field('people_counter')['avatud_teade']; ?></div>
                     </div>
 
                     <!-- Gender information -->
                     <div class="col-sm-12 col-lg-4 py-2">
-                        <div class="counter-gender-in <?php if (get_field('naised_voi_mehed') == 'Naised') echo 'counter-highlight'; ?>">Naised</div>
+                        <div class="counter-gender-in <?php if (get_field('people_counter')['naised_voi_mehed'] == 'Naised') echo 'counter-highlight'; ?>">Naised</div>
                         <div class="counter-dash">/</div>
-                        <div class="counter-gender-out <?php if (get_field('naised_voi_mehed') == 'Mehed') echo 'counter-highlight'; ?>">Mehed</div>
+                        <div class="counter-gender-out <?php if (get_field('people_counter')['naised_voi_mehed'] == 'Mehed') echo 'counter-highlight'; ?>">Mehed</div>
                     </div>
 
                     <!-- People counter -->
                     <div class="col-sm-12 col-lg-4 py-2">
-                        <div id="counter" class="counter-highlight"><?php the_field('inimesi'); ?></div>
+                        <div id="people-count" class="counter-highlight"><?php echo get_field('people_counter')['inimesi']; ?></div>
                         <div class="counter-dash">/</div>
-                        <div class="counter-people-max"><?php the_field('kohtade_arv'); ?></div>
+                        <div class="counter-people-max"><?php echo get_field('people_counter')['kohtade_arv']; ?></div>
+                        <div class="d-inline ml-5">
+                            <button onclick="refresh()" class="btn btn-warning">Refresh</button>
+                        </div>
                     </div>
                 </div><!--  row end -->
-            </div> <!--  counter-information-container end -->
+
+            </div> <!--  people-counter-container end -->
         </div><!--  container end -->
     <?php endif; ?>
 
 
     <!--Random message -->
+
     <?php if (get_field('random_message')['show_random_message']) : ?>
         <div class="container my-5">
-            <div class="counter-information-container">
+            <div class="main-container">
                 <div class="row p-2">
                     <div class="col-lg-12">
-                        <div class="random-msg"><?php echo get_field('random_message')['the_message']; ?></div>
+                        <h4 class="text-center color-red py-3"><?php echo get_field('random_message')['the_message']; ?></h4>
                     </div>
                 </div><!--  row end -->
-            </div> <!--  counter-information-container end -->
+            </div> <!--  main-container end -->
         </div><!--  container end -->
     <?php endif; ?>
 
@@ -140,7 +145,7 @@
 
                                 <div class="col m-3">
                                     <div class="d-flex justify-content-center">
-                                        <div class="news-container glass-container text-center">
+                                        <div class="news-container main-container text-center">
                                             <p class="text-muted font-weight-bold"><?php echo get_the_date(); ?></p>
                                             <hr>
                                             <a href="<?php the_permalink() ?>">

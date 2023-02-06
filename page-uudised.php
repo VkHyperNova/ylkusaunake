@@ -8,7 +8,7 @@
             foreach ($lastposts as $post) : setup_postdata($post); ?>
 
                 <div class="col-lg-12 my-5">
-                    <div class=" glass-container p-5">
+                    <div class="main-container p-5">
                         <!-- Date -->
                         <p class="color-blue"><?php echo get_the_date(); ?></p>
 

@@ -25,6 +25,7 @@ body {
     --color-light-gray: rgb(168, 167, 167);
     --color-light-blue: rgb(76, 117, 153);
     --color-main-black: rgb(0, 0, 0, 0.65);
+    --color-red: rgb(235, 57, 57);
 
     --main-box-shadow-1: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
@@ -71,6 +72,10 @@ img {
     color: var(--color-light-gray)!important;
 }
 
+.color-red {
+    color: var(--color-red) !important;
+}
+
 
 /* bg colors */
 .bg-black {
@@ -105,7 +110,7 @@ img {
 }
 
 /* containers */
-.glass-container {
+.main-container {
     background: rgba(255, 255, 255, 1);
     border-radius: 5px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -190,7 +195,7 @@ html {
 /***********************************************************************************************************************************************************************/
 
 /* Counter */
-.counter-information-container {
+.people-counter-container {
     text-align: center !important;
     background-image: url('./img/counter2.jpg');
     background-size: 100% 100%;
@@ -235,7 +240,6 @@ html {
 
 .random-msg {
     font-size: 1.5rem;
-    color: var(--color-white);
     font-weight: bolder;
     letter-spacing: 3px;
 }
