@@ -1,16 +1,17 @@
 <?php get_header(); ?>
 
-<?php $pageid = 201 ?>
-
-<div class="container-fluid bg-light text-center p-3">
-    <div class="row">
-        <?php for ($x = 1; $x <= 4; $x += 1) { ?>
-            <div class="col-lg-3">
-                <h4 class="text-muted font-italic spacing-2"><?php the_field('teenus_' . $x, $pageid); ?></h4>
-            </div>
-        <?php } ?>
+<!-- Teenuste riba -->
+<?php if (get_field('teenuste_riba')) : ?>
+    <div class="container-fluid bg-light text-center p-3">
+        <div class="row">
+            <?php for ($x = 1; $x <= 4; $x += 1) { ?>
+                <div class="col-lg-3">
+                    <h4 class="text-muted color-blue font-italic spacing-2"><?php echo get_field('teenuste_riba')['teenus_' . $x]; ?></h4>
+                </div>
+            <?php } ?>
+        </div>
     </div>
-</div>
+<?php endif; ?>
 
 <div class="page-content my-5">
 
@@ -21,7 +22,7 @@
             <div class="counter-information-container">
                 <div class="row p-2">
                     <!-- Open message -->
-                    <div class=" col-sm-12 col-lg-4 py-2">
+                    <div class="col-sm-12 col-lg-4 py-2">
                         <div class="counter-open-msg"><?php the_field('avatud_teade'); ?></div>
                     </div>
 
@@ -41,15 +42,16 @@
                 </div><!--  row end -->
             </div> <!--  counter-information-container end -->
         </div><!--  container end -->
+    <?php endif; ?>
 
 
-        <!--Random message -->
-    <?php elseif (get_field('random_message_onoff')) : ?>
+    <!--Random message -->
+    <?php if (get_field('random_message')['show_random_message']) : ?>
         <div class="container my-5">
             <div class="counter-information-container">
                 <div class="row p-2">
-                    <div class="col">
-                        <div class="random-msg"><?php the_field('message'); ?></div>
+                    <div class="col-lg-12">
+                        <div class="random-msg"><?php echo get_field('random_message')['the_message']; ?></div>
                     </div>
                 </div><!--  row end -->
             </div> <!--  counter-information-container end -->
@@ -67,7 +69,7 @@
             <div class="col">
 
                 <!-- Main Message -->
-                <h4 class="spacing-2 text-capitalize font-weight-bold "><?php the_field('main_message'); ?></h4>
+                <h4 class="spacing-2 color-blue text-capitalize font-weight-bold "><?php the_field('main_message'); ?></h4>
                 <hr style="width: 45%;">
                 <div class="row p-5 ">
                     <div class="col">
@@ -95,7 +97,7 @@
                 <!-- Broneerimine -->
                 <div class="row my-5">
                     <div class="col">
-                        <h4 class="spacing-2 text-capitalize font-weight-bold"><?php the_field('broneerise_info'); ?></h4>
+                        <h4 class="spacing-2 color-blue text-capitalize font-weight-bold"><?php the_field('broneerise_info'); ?></h4>
                         <hr style="width: 45%;">
                         <h5 class="text-secondary  px-5 pt-5"><?php the_field('kontakt_telefon'); ?></h5>
                         <h5 class="text-secondary  px-5"><?php the_field('kontakt_email'); ?></h5>
@@ -114,7 +116,7 @@
                     <div class="col">
                         <div class="row">
                             <div class="col">
-                                <h4 class="spacing-2 text-capitalize font-weight-bold">Asukoht</h4>
+                                <h4 class="spacing-2 color-blue text-capitalize font-weight-bold">Asukoht</h4>
                                 <hr style="width: 25%;">
                             </div>
                         </div>

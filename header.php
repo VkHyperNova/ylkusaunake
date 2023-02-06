@@ -14,9 +14,9 @@
 
 <body <?php body_class(); ?>>
 
-    <!-- Header page id !!!IMPORTANT!!!! -->
-    <?php $pageid = 201 ?>
+    <!-- Header page id !IMPORTANT -->
 
+    <?php $pageid = 201 ?>
 
     <!-- LOGO -->
 
@@ -24,7 +24,6 @@
         <div class="row">
             <div class="col-lg-4 col-md-12 col-sm-12 text-center">
                 <a href="https://www.ylkusaunake.ee">
-                    <!--  <img class="logo img-fluid" alt="Ylkusaunake logo" src="<?php echo get_template_directory_uri(); ?>/img/ylkusaunake_logo_transparent.png"> -->
                     <?php if (get_field('logo', $pageid)) : ?>
                         <img class="logo img-fluid" src="<?php the_field('logo', $pageid); ?>" />
                     <?php endif; ?>
@@ -32,6 +31,7 @@
             </div>
 
             <!-- Header Message -->
+
             <div class="col-lg-8 col-md-12 col-sm-12 m-auto">
                 <h4 class="spacing-3 text-uppercase font-italic text-center"><?php the_field('sauna_kirjeldus', $pageid); ?></h4>
                 <h1 class="spacing-3 text-uppercase font-weight-bold font-italic text-right"><?php the_field('sauna_asukoht', $pageid); ?></h1>
@@ -39,23 +39,14 @@
         </div>
     </div>
 
-    <!-- Teenused -->
-    <!-- <div class="container-fluid text-center p-3">
-        <div class="row">
-            <?php for ($x = 1; $x <= 4; $x += 1) { ?>
-                <div class="col-lg-3">
-                    <h4 class="color-blue spacing-2"><?php the_field('teenus_' . $x, $pageid); ?></h4>
-                </div>
-            <?php } ?>
-        </div>
-    </div> -->
-
     <!-- NAVIGATION -->
+
     <header class="sticky-top bg-black">
         <div class="container">
             <nav class="navbar navbar-expand-md" role="navigation">
 
                 <!-- Brand and toggle get grouped for better mobile display -->
+                
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'your-theme-slug'); ?>">
                     <span class="color-white">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-menu-up" viewBox="0 0 16 16">
@@ -64,9 +55,8 @@
                     </span>
                 </button>
 
-
-
                 <!-- Navigation items -->
+
                 <?php
                 wp_nav_menu(array(
                     'theme_location'    => 'top-menu',
