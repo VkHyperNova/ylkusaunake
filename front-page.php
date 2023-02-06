@@ -1,12 +1,13 @@
 <?php get_header(); ?>
 
 <!-- Teenuste riba -->
-<?php if (get_field('teenuste_riba')) : ?>
+
+<?php if (get_field('sauna_info')['teenuste_riba']) : ?>
     <div class="container-fluid bg-light text-center p-3">
         <div class="row">
             <?php for ($x = 1; $x <= 4; $x += 1) { ?>
                 <div class="col-lg-3">
-                    <h4 class="text-muted color-blue font-italic spacing-2"><?php echo get_field('teenuste_riba')['teenus_' . $x]; ?></h4>
+                    <h4 class="text-muted color-blue font-italic spacing-2"><?php echo get_field('sauna_info')['teenuste_riba']['teenus_' . $x]; ?></h4>
                 </div>
             <?php } ?>
         </div>
@@ -43,7 +44,6 @@
                         </div>
                     </div>
                 </div><!--  row end -->
-
             </div> <!--  people-counter-container end -->
         </div><!--  container end -->
     <?php endif; ?>
@@ -74,25 +74,25 @@
             <div class="col">
 
                 <!-- Main Message -->
-                <h4 class="spacing-2 color-blue text-capitalize font-weight-bold "><?php the_field('main_message'); ?></h4>
+                <h4 class="spacing-2 color-blue text-capitalize font-weight-bold "><?php echo get_field('sauna_info')['tava_saun']['tava_sauna_info']; ?></h4>
                 <hr style="width: 45%;">
                 <div class="row p-5 ">
                     <div class="col">
                         <h4 class="text-secondary">Naised</h4>
-                        <h5 class="text-secondary"><?php the_field('naiste_aeg'); ?></h5>
+                        <h5 class="text-secondary"><?php echo get_field('sauna_info')['tava_saun']['tava_sauna_aeg']['naiste_aeg']; ?></h5>
                     </div>
                     <div class="col">
                         <h4 class="text-secondary">Mehed</h4>
-                        <h5 class="text-secondary"><?php the_field('meeste_aeg'); ?></h5>
+                        <h5 class="text-secondary"><?php echo get_field('sauna_info')['tava_saun']['tava_sauna_aeg']['meeste_aeg']; ?></h5>
                     </div>
                 </div>
 
                 <!-- Price -->
                 <div class="row my-2">
                     <div class="col">
-                        <?php if (get_field('naita_tavasauna_hinda_onoff')) : ?>
+                        <?php if (get_field('sauna_info')['tava_saun']['naita_tavasauna_hinda']['naita_tavasauna_hinda_onoff']) : ?>
                             <hr>
-                            <p class="text-secondary font-weight-bold text-right">Hind: <?php the_field('tavasauna_hind'); ?> EUR</p>
+                            <p class="text-secondary font-weight-bold text-right">Hind: <?php echo get_field('sauna_info')['tava_saun']['naita_tavasauna_hinda']['tavasauna_hind']; ?> EUR</p>
                         <?php endif ?>
                     </div>
                 </div>
@@ -102,17 +102,17 @@
                 <!-- Broneerimine -->
                 <div class="row my-5">
                     <div class="col">
-                        <h4 class="spacing-2 color-blue text-capitalize font-weight-bold"><?php the_field('broneerise_info'); ?></h4>
+                        <h4 class="spacing-2 color-blue text-capitalize font-weight-bold"><?php echo get_field('sauna_info')['broneerimine']['broneerise_info']; ?></h4>
                         <hr style="width: 45%;">
-                        <h5 class="text-secondary  px-5 pt-5"><?php the_field('kontakt_telefon'); ?></h5>
-                        <h5 class="text-secondary  px-5"><?php the_field('kontakt_email'); ?></h5>
+                        <h5 class="text-secondary  px-5 pt-5"><?php echo get_field('sauna_info')['broneerimine']['kontaktid']['kontakt_telefon']; ?></h5>
+                        <h5 class="text-secondary  px-5"><?php echo get_field('sauna_info')['broneerimine']['kontaktid']['kontakt_email']; ?></h5>
                     </div>
                 </div>
 
                 <!-- Broneerimis hind -->
-                <?php if (get_field('naita_broneerimis_hinda_onoff')) : ?>
+                <?php if (get_field('sauna_info')['broneerimine']['naita_broneerimise_hinda']['naita_broneerimis_hinda_onoff']) : ?>
                     <hr>
-                    <p class="text-secondary font-weight-bold text-right">Hind: <?php the_field('broneerimis_hind'); ?> EUR/Tund</p>
+                    <p class="text-secondary font-weight-bold text-right">Hind: <?php echo get_field('sauna_info')['broneerimine']['naita_broneerimise_hinda']['broneerimis_hind']; ?> EUR/Tund</p>
                 <?php endif ?>
 
 

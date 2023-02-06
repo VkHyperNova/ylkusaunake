@@ -14,9 +14,8 @@
 
 <body <?php body_class(); ?>>
 
-    <!-- Header page id !IMPORTANT -->
 
-    <?php $pageid = 201 ?>
+    <?php $pageid = 201 /* Header page id is IMPORTANT for displaying same content on every page! */?>
 
     <!-- LOGO -->
 
