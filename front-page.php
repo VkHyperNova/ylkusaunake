@@ -70,8 +70,11 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-2"></div>
+
             <!-- Main column -->
-            <div class="col">
+            <div class="col-lg-6">
+
+                <!-- Main information -->
 
                 <div class="main-container text-center my-5">
                     <h3 class="color-blue text-uppercase pt-5"><?php echo get_field('sauna_info')['tava_saun']['tava_sauna_info']; ?></h3>
@@ -98,20 +101,17 @@
                 </div>
 
                 <!-- Asukoht -->
-                <div class="row my-5">
-                    <div class="col">
-                        <div class="row">
-                            <div class="col">
-                                <h4 class="spacing-2 color-blue text-capitalize font-weight-bold">Asukoht</h4>
-                                <hr style="width: 25%;">
-                            </div>
-                        </div>
-                        <div class="box-shadow-1 my-5">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2095.5975121683023!2d26.722057816115733!3d58.315846098904665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eb3a0f7a60a9d1%3A0xf31a787ed1c7c89f!2sPargi%207a%2C%20%C3%9Clenurme%2C%2061714%20Tartu%20maakond!5e0!3m2!1sen!2see!4v1674840659985!5m2!1sen!2see" width="800" height="450" style="border: 0px; " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
+
+                <div class="main-container text-center my-5">
+                    <h3 class="color-blue pt-5">Asukoht</h3>
+                    <p><?php echo get_field('sauna_info')['asukoht']['sauna_aadress']; ?></p>
+                    <iframe class="p-5" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2095.5975121683023!2d26.722057816115733!3d58.315846098904665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eb3a0f7a60a9d1%3A0xf31a787ed1c7c89f!2sPargi%207a%2C%20%C3%9Clenurme%2C%2061714%20Tartu%20maakond!5e0!3m2!1sen!2see!4v1674840659985!5m2!1sen!2see" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <h3 class="color-blue pt-5">Ülenurme Saun</h3>
+                    <img class="p-5" width="800" height="600" src="<?php echo get_field('sauna_info')['asukoht']['sauna_pilt']; ?>" alt="Eest vaade">
                 </div>
-            </div>
+
+
+            </div> <!-- col end -->
 
 
             <!-- News column -->
@@ -120,7 +120,7 @@
                     <h4 class="color-blue text-uppercase text-center">Viimased Uudised</h4>
                     <div class="row">
 
-                        <?php $lastposts = get_posts(array('posts_per_page' => 3)); ?>
+                        <?php $lastposts = get_posts(array('posts_per_page' => 4)); ?>
                         <?php if ($lastposts) {
                             foreach ($lastposts as $post) : setup_postdata($post); ?>
 
