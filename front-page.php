@@ -67,54 +67,35 @@
 
 
     <!-- AVALEHT CONTENT -->
-    <div class="container-fluid py-5">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-lg-2"></div>
             <!-- Main column -->
             <div class="col">
 
-                <!-- Main Message -->
-                <h4 class="spacing-2 color-blue text-capitalize font-weight-bold "><?php echo get_field('sauna_info')['tava_saun']['tava_sauna_info']; ?></h4>
-                <hr style="width: 45%;">
-                <div class="row p-5 ">
-                    <div class="col">
-                        <h4 class="text-secondary">Naised</h4>
-                        <h5 class="text-secondary"><?php echo get_field('sauna_info')['tava_saun']['tava_sauna_aeg']['naiste_aeg']; ?></h5>
-                    </div>
-                    <div class="col">
-                        <h4 class="text-secondary">Mehed</h4>
-                        <h5 class="text-secondary"><?php echo get_field('sauna_info')['tava_saun']['tava_sauna_aeg']['meeste_aeg']; ?></h5>
-                    </div>
-                </div>
-
-                <!-- Price -->
-                <div class="row my-2">
-                    <div class="col">
+                <div class="main-container text-center my-5">
+                    <h3 class="color-blue text-uppercase pt-5"><?php echo get_field('sauna_info')['tava_saun']['tava_sauna_info']; ?></h3>
+                    <div class="row pt-5">
+                        <div class="col">
+                            <h5>Naised</h5>
+                            <h6><?php echo get_field('sauna_info')['tava_saun']['tava_sauna_aeg']['naiste_aeg']; ?></h6>
+                        </div>
+                        <div class="col">
+                            <h5>Mehed</h5>
+                            <h6><?php echo get_field('sauna_info')['tava_saun']['tava_sauna_aeg']['meeste_aeg']; ?></h6>
+                        </div>
                         <?php if (get_field('sauna_info')['tava_saun']['naita_tavasauna_hinda']['naita_tavasauna_hinda_onoff']) : ?>
-                            <hr>
-                            <p class="text-secondary font-weight-bold text-right">Hind: <?php echo get_field('sauna_info')['tava_saun']['naita_tavasauna_hinda']['tavasauna_hind']; ?> EUR</p>
+                            <div class="col">
+                                <h5>Hind</h5>
+                                <h6><?php echo get_field('sauna_info')['tava_saun']['naita_tavasauna_hinda']['tavasauna_hind']; ?> EUR</h6>
+                            </div>
                         <?php endif ?>
                     </div>
-                </div>
-
-
-
-                <!-- Broneerimine -->
-                <div class="row my-5">
-                    <div class="col">
-                        <h4 class="spacing-2 color-blue text-capitalize font-weight-bold"><?php echo get_field('sauna_info')['broneerimine']['broneerise_info']; ?></h4>
-                        <hr style="width: 45%;">
-                        <h5 class="text-secondary  px-5 pt-5"><?php echo get_field('sauna_info')['broneerimine']['kontaktid']['kontakt_telefon']; ?></h5>
-                        <h5 class="text-secondary  px-5"><?php echo get_field('sauna_info')['broneerimine']['kontaktid']['kontakt_email']; ?></h5>
+                    <div class="pt-5">
+                        <hr>
+                        <p class="font-weight-bold"><?php echo get_field('sauna_info')['broneerimine']['broneerise_info']; ?> - Lisainfo Tel. <?php echo get_field('sauna_info')['broneerimine']['kontaktid']['kontakt_telefon']; ?></p>
                     </div>
                 </div>
-
-                <!-- Broneerimis hind -->
-                <?php if (get_field('sauna_info')['broneerimine']['naita_broneerimise_hinda']['naita_broneerimis_hinda_onoff']) : ?>
-                    <hr>
-                    <p class="text-secondary font-weight-bold text-right">Hind: <?php echo get_field('sauna_info')['broneerimine']['naita_broneerimise_hinda']['broneerimis_hind']; ?> EUR/Tund</p>
-                <?php endif ?>
-
 
                 <!-- Asukoht -->
                 <div class="row my-5">
