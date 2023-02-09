@@ -38,17 +38,16 @@ h5,
 h6,
 p,
 li {
-    
+
     letter-spacing: 1px;
     color: var(--color-main-black);
- 
+
 
 }
 
 
-img {
-    max-height: 800px;
-    padding: 2rem;
+ul {
+    list-style-type: none;
 }
 
 /* Logo */
@@ -65,11 +64,11 @@ img {
 }
 
 .color-blue {
-    color: var(--color-light-blue)!important;
+    color: var(--color-light-blue) !important;
 }
 
 .color-gray {
-    color: var(--color-light-gray)!important;
+    color: var(--color-light-gray) !important;
 }
 
 .color-red {
@@ -79,53 +78,71 @@ img {
 
 /* bg colors */
 .bg-black {
-    background-color: var(--color-black)!important;
+    background-color: var(--color-black) !important;
 }
 
 /* letter-spacing */
 
 .spacing-1 {
-    letter-spacing: 1px!important;
+    letter-spacing: 1px !important;
 }
 
 .spacing-2 {
-    letter-spacing: 2px!important;
+    letter-spacing: 2px !important;
 }
 
 .spacing-3 {
-    letter-spacing: 3px!important;
+    letter-spacing: 3px !important;
 }
 
 .spacing-4 {
-    letter-spacing: 4px!important;
+    letter-spacing: 4px !important;
 }
 
 .spacing-5 {
-    letter-spacing: 5px!important;
+    letter-spacing: 5px !important;
 }
 
 /* font-size */
 .font-size-big {
-    font-size: 2rem!important;
+    font-size: 2rem !important;
 }
+
 
 /* containers */
 .main-container {
-    background: rgba(255, 255, 255, 1);
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 5px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(3.6px);
     -webkit-backdrop-filter: blur(3.6px);
     border: 1px solid rgba(255, 255, 255, 1);
+    overflow: hidden;
 }
 
-.box-shadow-1 {
-    box-shadow: var(--main-box-shadow-1);
+.news-small-container {
+    height: 20rem;
+    overflow: hidden;
+    padding: 1rem;
+    width: 400px;
 }
+
+.contact-small-container {
+    min-height: 13rem;
+}
+
+.contact-small-container li {
+    font-size: 1.2rem;
+}
+
+.wp-block-image {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
 /***********************************************************************************************************************************************************************/
 /********************************************************************************* Header ******************************************************************************/
 /***********************************************************************************************************************************************************************/
-
 
 
 
@@ -157,7 +174,7 @@ nav li {
     color: var(--color-white);
     box-shadow: rgb(255, 255, 255) 6px 5px 5px;
     border-radius: 1rem;
-  
+
 }
 
 /* OnClick */
@@ -178,7 +195,8 @@ html {
     animation: fade-in .5s;
 }
 
-.page-content, nav {
+.page-content,
+nav {
     animation: fade-in 1s backwards .1s;
 }
 
@@ -218,8 +236,9 @@ html {
 
 #gender {
     display: inline;
-    color: var(--color-light-gray);   
+    color: var(--color-light-gray);
 }
+
 .counter-highlight,
 .counter-dash {
     color: var(--color-white);
@@ -254,13 +273,6 @@ html {
 
 
 
-/* News */
-.news-container {
-    height: 20rem;
-    overflow: auto;
-    padding: 1rem;
-    width: 400px;
-}
 
 
 
@@ -289,13 +301,10 @@ footer {
     letter-spacing: 2px;
 }
 
-.footer-information ul {
-    list-style-type: none;
-}
+
 
 .footer-information li {
     font-size: 1.2rem;
-    letter-spacing: 1px;
     color: var(--color-white);
 }
 
@@ -310,7 +319,6 @@ footer {
     padding-top: 1rem;
     padding-bottom: 1rem;
     text-align: center !important;
-    /* background-color: var(--color-black_2); */
 }
 
 .footer-copyright span {

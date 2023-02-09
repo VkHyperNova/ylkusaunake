@@ -2,20 +2,20 @@
 
 
 <!-- Content -->
-<div class="container page-content my-5">
+<div class="page-content my-5">
+    <div class="container">
+        <h1 class="font-weight-bold my-5">Meist</h1>
 
 
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
+                <div class="main-container p-5">
+                    <?php the_content(); ?>
+                </div>
 
-
-<h1 class="text-center">Tutvustus (coming soon)</h1>
-
-    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <?php the_content(); ?>
-    <?php endwhile;
-    endif; ?>
-</div>
-
-
+        <?php endwhile;
+        endif; ?>
+    </div> <!-- container end -->
+</div> <!-- page-content end -->
 
 <?php get_footer(); ?>
