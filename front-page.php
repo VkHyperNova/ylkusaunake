@@ -69,53 +69,55 @@
     <!-- AVALEHT CONTENT -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-2"></div>
+            <!-- <div class="col-lg-2"></div> -->
 
             <!-- Main column -->
-            <div class="col-lg-6">
+            <div class="col">
 
                 <!-- Main information -->
-
-                <div class="main-container my-5">
-                    <h3 class="color-blue text-uppercase pt-5 px-5"><?php echo get_field('sauna_info')['tava_saun']['tava_sauna_info']; ?></h3>
-                    <div class="row pt-5 text-center">
-                        <div class="col">
-                            <h5>Naised</h5>
-                            <h6><?php echo get_field('sauna_info')['tava_saun']['tava_sauna_aeg']['naiste_aeg']; ?></h6>
-                        </div>
-                        <div class="col">
-                            <h5>Mehed</h5>
-                            <h6><?php echo get_field('sauna_info')['tava_saun']['tava_sauna_aeg']['meeste_aeg']; ?></h6>
-                        </div>
-                        <?php if (get_field('sauna_info')['tava_saun']['naita_tavasauna_hinda']['naita_tavasauna_hinda_onoff']) : ?>
+                <div class="front-page-container">
+                    <div class="main-container my-5">
+                        <h3 class="color-blue text-uppercase pt-5 px-5"><?php echo get_field('sauna_info')['tava_saun']['tava_sauna_info']; ?></h3>
+                        <div class="row pt-5 text-center">
                             <div class="col">
-                                <h5>Hind</h5>
-                                <h6><?php echo get_field('sauna_info')['tava_saun']['naita_tavasauna_hinda']['tavasauna_hind']; ?> EUR</h6>
+                                <h5 class="px-2">Naised</h5>
+                                <h6 class="px-2"><?php echo get_field('sauna_info')['tava_saun']['tava_sauna_aeg']['naiste_aeg']; ?></h6>
                             </div>
-                        <?php endif ?>
+                            <div class="col">
+                                <h5 class="px-2">Mehed</h5>
+                                <h6 class="px-2"><?php echo get_field('sauna_info')['tava_saun']['tava_sauna_aeg']['meeste_aeg']; ?></h6>
+                            </div>
+                            <?php if (get_field('sauna_info')['tava_saun']['naita_tavasauna_hinda']['naita_tavasauna_hinda_onoff']) : ?>
+                                <div class="col">
+                                    <h5 class="px-2">Hind</h5>
+                                    <h6 class="px-2"><?php echo get_field('sauna_info')['tava_saun']['naita_tavasauna_hinda']['tavasauna_hind']; ?> EUR</h6>
+                                </div>
+                            <?php endif ?>
+                        </div>
+                        <div class="pt-5">
+                            <hr>
+                            <p class="font-weight-bold text-center"><?php echo get_field('sauna_info')['broneerimine']['broneerise_info']; ?> - Lisainfo Tel. <?php echo get_field('sauna_info')['broneerimine']['kontaktid']['kontakt_telefon']; ?></p>
+                        </div>
                     </div>
-                    <div class="pt-5">
-                        <hr>
-                        <p class="font-weight-bold text-center"><?php echo get_field('sauna_info')['broneerimine']['broneerise_info']; ?> - Lisainfo Tel. <?php echo get_field('sauna_info')['broneerimine']['kontaktid']['kontakt_telefon']; ?></p>
+
+                    <!-- Asukoht -->
+
+                    <div class="main-container">
+                        <h3 class="color-blue pt-5 px-5">Asukoht</h3>
+                        <p class="px-5 font-weight-bold"><?php echo get_field('sauna_info')['asukoht']['sauna_aadress']; ?></p>
+                        <div class="text-center">
+                            <div class="map-responsive">
+                                <iframe class="p-5" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2095.5975121683023!2d26.722057816115733!3d58.315846098904665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eb3a0f7a60a9d1%3A0xf31a787ed1c7c89f!2sPargi%207a%2C%20%C3%9Clenurme%2C%2061714%20Tartu%20maakond!5e0!3m2!1sen!2see!4v1674840659985!5m2!1sen!2see"></iframe>
+                            </div>
+                            <hr>
+                            <img class="p-5 img-fluid" width="800" height="600" src="<?php echo get_field('sauna_info')['asukoht']['sauna_pilt']; ?>" alt="Eest vaade">
+                        </div>
                     </div>
-                </div>
-
-                <!-- Asukoht -->
-
-                <div class="main-container my-5">
-                    <h3 class="color-blue pt-5 px-5">Asukoht</h3>
-                    <p class="px-5 font-weight-bold"><?php echo get_field('sauna_info')['asukoht']['sauna_aadress']; ?></p>
-                    <div class="text-center">
-                        <iframe class="p-5" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2095.5975121683023!2d26.722057816115733!3d58.315846098904665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eb3a0f7a60a9d1%3A0xf31a787ed1c7c89f!2sPargi%207a%2C%20%C3%9Clenurme%2C%2061714%20Tartu%20maakond!5e0!3m2!1sen!2see!4v1674840659985!5m2!1sen!2see" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <hr>
-                        <img class="p-5" width="800" height="600" src="<?php echo get_field('sauna_info')['asukoht']['sauna_pilt']; ?>" alt="Eest vaade">
-                    </div>
-                </div>
-            </div> <!-- col end -->
-
+                </div> <!-- col end -->
+                </div> <!-- front-page-container end -->
 
             <!-- News column -->
-            <div class="col">
+            <div class="col-lg-3">
                 <div class="my-5">
                     <h4 class="color-blue text-uppercase text-center">Viimased Uudised</h4>
                     <div class="row">
@@ -124,7 +126,7 @@
                         <?php if ($lastposts) {
                             foreach ($lastposts as $post) : setup_postdata($post); ?>
 
-                                <div class="col m-3">
+                                <div class="col-lg-12 col-md-4 mb-3 ">
                                     <div class="d-flex justify-content-center">
                                         <div class="news-small-container main-container text-center">
                                             <p class="text-muted font-weight-bold"><?php echo get_the_date(); ?></p>
