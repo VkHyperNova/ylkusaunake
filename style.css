@@ -14,7 +14,11 @@ Author: VK-DEV
     font-family: Georgia;
 }
 
+
 body {
+
+
+    /* Background */
     background-image: url('./img/bg-pattern2_mirror.jpg');
     background-size: 100% 100%;
     background-attachment: fixed;
@@ -38,11 +42,8 @@ h5,
 h6,
 p,
 li {
-
     letter-spacing: 1px;
     color: var(--color-main-black);
-
-
 }
 
 
@@ -121,21 +122,15 @@ ul {
 }
 
 .front-page-container {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
+    width: 75% !important;
 }
 
 .news-small-container {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
     height: 20rem;
     overflow: hidden;
     padding: 1rem;
-    max-width: 400px;
+    width: 400px;
+
 }
 
 .contact-small-container {
@@ -153,29 +148,18 @@ ul {
 
 /* google maps responsive  */
 .map-responsive {
-
     overflow: hidden;
-
     padding-bottom: 56.25%;
-
     position: relative;
-
     height: 0;
-
 }
 
 .map-responsive iframe {
-
     left: 0;
-
     top: 0;
-
     height: 100%;
-
     width: 100%;
-
     position: absolute;
-
 }
 
 /***********************************************************************************************************************************************************************/
@@ -384,7 +368,7 @@ footer {
 /******************************************************************************** Mobile *******************************************************************************/
 /***********************************************************************************************************************************************************************/
 
-
+/* Laptops */
 @media only screen and (max-width: 991px) {
 
     .footer-information,
@@ -392,8 +376,40 @@ footer {
         text-align: center !important;
     }
 
+    .front-page-container {
+        width: 100% !important;
+    }
+
 
 }
+
+/* Tablets */
+@media only screen and (max-width: 767px) {}
+
+
+/* Phones */
+@media only screen and (max-width: 575px) {
+
+    /* h1 {
+        font-size: 8vw;
+    }
+
+    h3 {
+        font-size: 6vw;
+    }
+
+    h4 {
+        font-size: 5vw;
+    }
+    h5 {
+        font-size: 5vw;
+    }
+
+    h6,p,.footer-information li, span, a {
+        font-size: 5vw;
+    } */
+}
+
 
 @media only screen and (max-width: 460px) {
 
@@ -401,9 +417,9 @@ footer {
         width: auto;
     }
 
+
 }
 
 
-/***********************************************************************************************************************************************************************/
-/******************************************************************************** END **********************************************************************************/
-/***********************************************************************************************************************************************************************/
+
+

@@ -9,7 +9,7 @@
 
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-                <div class="main-container p-5">
+                <div class="main-container px-sm-5 px-2 py-3">
                     <?php the_content(); ?>
                 </div>
 

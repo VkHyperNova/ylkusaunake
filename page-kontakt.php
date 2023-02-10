@@ -11,7 +11,7 @@
             <?php for ($x = 0; $x <= 2; $x += 1) { ?>
                 <div class="col my-3">
                     <div class="contact-small-container main-container px-5 py-3">
-                        <h5 class="text-uppercase spacing-2 font-weight-bold py-2"><?php echo $APR[$x]; ?></h5>
+                        <h5 class="color-blue text-uppercase spacing-2 font-weight-bold py-2"><?php echo $APR[$x]; ?></h5>
                         <?php dynamic_sidebar('footer_information_' . $APR[$x]); ?>
                     </div>
                 </div>

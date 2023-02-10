@@ -9,17 +9,17 @@
             foreach ($lastposts as $post) : setup_postdata($post); ?>
 
                 <section class="my-5">
-                    
 
-                    <div class="main-container p-5">
+
+                    <div class="main-container px-2 py-5 p-md-5">
                         <!-- Header -->
-                        <h2 class="color-blue text-left font-weight-bold p-2"><?php the_title(); ?></h2>
+                        <h2 class="color-blue text-md-left text-center font-weight-bold"><?php the_title(); ?></h2>
                         <!-- Date -->
-                    <p class=" font-weight-bold text-right p-2"><?php echo get_the_date(); ?></p>
+                        <p class="font-weight-bold text-md-right text-center"><?php echo get_the_date(); ?></p>
                         <hr>
 
                         <!-- Content -->
-                        <div class="p-5">
+                        <div class="px-md-5 px-2 py-2">
                             <?php the_content(); ?>
                         </div>
                     </div>
