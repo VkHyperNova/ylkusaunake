@@ -19,7 +19,7 @@ body {
 
 
     /* Background */
-    background-image: url('./img/bg-pattern2_mirror.jpg');
+    background-image: url('./img/bg-pattern.jpg');
     background-size: 100% 100%;
     background-attachment: fixed;
 
@@ -237,7 +237,7 @@ nav {
 /* Counter */
 .people-counter-container {
     text-align: center !important;
-    background-image: url('./img/counter2.jpg');
+    background-image: url('./img/counter-img.jpg');
     background-size: 100% 100%;
     border-radius: 2rem;
     letter-spacing: 2px;
@@ -312,7 +312,7 @@ nav {
 
 
 footer {
-    background-image: url('./img/counter4.jpg');
+    background-image: url('./img/footer-img.jpg');
     background-size: 100% 100%;
     padding-top: 3rem;
 }
