@@ -51,6 +51,11 @@ ul {
     list-style-type: none;
 }
 
+#uudised ul {
+    list-style-type: disc;
+    padding-left: 2rem;
+}
+
 /* Logo */
 .logo {
     width: 20rem;
@@ -126,11 +131,14 @@ ul {
 }
 
 .news-small-container {
-    height: 20rem;
+    min-height: 20rem;
     overflow: hidden;
     padding: 1rem;
     width: 400px;
+}
 
+.news-image-container {
+    height: 450px;
 }
 
 .contact-small-container {

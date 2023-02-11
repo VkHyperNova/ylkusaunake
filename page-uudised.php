@@ -8,20 +8,27 @@
         <?php if ($lastposts) {
             foreach ($lastposts as $post) : setup_postdata($post); ?>
 
-                <section class="my-5">
-
-
+                <section id="uudised" class="my-5">
                     <div class="main-container px-2 py-5 p-md-5">
                         <!-- Header -->
                         <h2 class="color-blue text-md-left text-center font-weight-bold"><?php the_title(); ?></h2>
                         <!-- Date -->
-                        <p class="font-weight-bold text-md-right text-center"><?php echo get_the_date(); ?></p>
+                        <p class="font-weight-bold text-md-right text-center pt-2"><?php echo get_the_date(); ?></p>
                         <hr>
 
                         <!-- Content -->
-                        <div class="px-md-5 px-2 py-2">
-                            <?php the_content(); ?>
-                        </div>
+                        <?php if (get_field('uudise_pilt')) : ?>
+                            <div class="row">
+                                <div class="col-md-4 pb-5">
+                                    <img class="img-fluid img-thumbnail" src="<?php the_field('uudise_pilt') ?>">
+                                </div>
+                                <div class="col-md-8">
+                                    <?php the_field('uudise_sisu') ?>
+                                </div>
+                            </div>
+                        <?php else : ?>
+                            <?php the_field('uudise_sisu') ?>
+                        <?php endif; ?>
                     </div>
                 </section>
             <?php endforeach; ?>

@@ -135,16 +135,17 @@
                                                 <h5 class="p-4 font-weight-bold color-blue"><?php the_title(); ?></h5>
                                             </a>
 
-                                            <!-- Display limited content -->
-                                            <?php
-                                            $char_limit = 100; //character limit
-                                            $content = $post->post_content; //contents saved in a variable
-                                            echo '<p>';
-                                            echo substr(strip_tags($content), 0, $char_limit);
-                                            echo '...</p>';
+                                            <!-- Content -->
+                                            <?php if (get_field('uudise_pilt')) : ?>
+                                                <div class="pb-4">
+                                                    <img class="img-fluid img-thumbnail" src="<?php the_field('uudise_pilt') ?>">
+                                                </div>
+                                                <?php the_field('uudise_sisu') ?>
 
-                                            ?>
-                                            <a class="font-weight-bold text-secondary" href="<?php the_permalink() ?>">Loe edasi</a>
+                                            <?php else : ?>
+                                                <?php the_field('uudise_sisu') ?>
+                                            <?php endif; ?>
+                                            <a class="font-weight-bold text-primary" href="<?php the_permalink() ?>">Loe edasi</a>
                                         </div>
                                     </div>
                                 </div>
