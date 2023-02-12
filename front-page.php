@@ -145,7 +145,7 @@
                                             <?php else : ?>
                                                 <?php the_field('uudise_sisu') ?>
                                             <?php endif; ?>
-                                            <a class="font-weight-bold text-primary" href="<?php the_permalink() ?>">Loe edasi</a>
+                                            <!-- <a class="font-weight-bold text-primary" href="<?php the_permalink() ?>">Loe edasi</a> -->
                                         </div>
                                     </div>
                                 </div>

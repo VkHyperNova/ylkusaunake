@@ -9,11 +9,13 @@
             foreach ($lastposts as $post) : setup_postdata($post); ?>
 
                 <section id="uudised" class="my-5">
-                    <div class="main-container px-2 py-5 p-md-5">
+                    <div class="main-container p-sm-5 px-4 py-5">
+
                         <!-- Header -->
-                        <h2 class="color-blue text-md-left text-center font-weight-bold"><?php the_title(); ?></h2>
+                        <h2 class="color-blue font-weight-bold text-md-left text-center"><?php the_title(); ?></h2>
                         <!-- Date -->
-                        <p class="font-weight-bold text-md-right text-center pt-2"><?php echo get_the_date(); ?></p>
+                        <p class="font-weight-bold text-md-right text-center"><?php echo get_the_date(); ?></p>
+
                         <hr>
 
                         <!-- Content -->
