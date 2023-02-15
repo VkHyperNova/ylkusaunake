@@ -17,7 +17,7 @@
                         <p class="font-weight-bold text-md-right text-center"><?php echo get_the_date(); ?></p>
 
                         <hr>
-
+                        
                         <!-- Content -->
                         <?php if (get_field('uudise_pilt')) : ?>
                             <div class="row">

@@ -170,10 +170,7 @@ ul {
     position: absolute;
 }
 
-.large-img {
-    height: 500px;
-    width: 450px;
-  }
+
 
 /***********************************************************************************************************************************************************************/
 /********************************************************************************* Header ******************************************************************************/
@@ -392,8 +389,6 @@ footer {
     .front-page-container {
         width: 100% !important;
     }
-
-
 }
 
 /* Tablets */
@@ -401,27 +396,7 @@ footer {
 
 
 /* Phones */
-@media only screen and (max-width: 575px) {
-
-    /* h1 {
-        font-size: 8vw;
-    }
-
-    h3 {
-        font-size: 6vw;
-    }
-
-    h4 {
-        font-size: 5vw;
-    }
-    h5 {
-        font-size: 5vw;
-    }
-
-    h6,p,.footer-information li, span, a {
-        font-size: 5vw;
-    } */
-}
+@media only screen and (max-width: 575px) {}
 
 
 @media only screen and (max-width: 460px) {
