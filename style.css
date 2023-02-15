@@ -340,6 +340,15 @@ footer {
     color: var(--color-white);
 }
 
+
+/* Footer Facebook Group Logo */
+.footer-information a img:hover {
+    transform: scale(.95);
+    transition: .3s;  
+}
+
+
+
 .footer-logo {
     width: 10rem;
 }
