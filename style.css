@@ -342,7 +342,7 @@ footer {
 
 
 /* Footer Facebook Group Logo */
-.footer-information a img:hover {
+#fb-group img:hover {
     transform: scale(.95);
     transition: .3s;  
 }

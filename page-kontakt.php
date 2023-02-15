@@ -18,6 +18,17 @@
             <?php } ?>
         </div>
         <hr>
+        <section id="fb-group" class="my-5">
+            <div class="d-flex justify-content-center">
+                <div class="main-container text-center px-5 pb-5">
+                    <h5 class="font-weight-bold py-5 text-uppercase color-blue">Meil on ka Facebooki Grupp</h5>
+                    <a href="https://www.facebook.com/Ylkusaunake/">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/fb-grupp.png" width="150" />
+                    </a>
+                </div>
+            </div>
+        </section>
+        <hr>
         <div class="map-responsive my-5">
             <iframe width="1100" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2095.5975121683023!2d26.722057816115733!3d58.315846098904665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eb3a0f7a60a9d1%3A0xf31a787ed1c7c89f!2sPargi%207a%2C%20%C3%9Clenurme%2C%2061714%20Tartu%20maakond!5e0!3m2!1sen!2see!4v1674840659985!5m2!1sen!2see"></iframe>
         </div>

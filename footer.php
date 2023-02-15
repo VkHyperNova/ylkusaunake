@@ -5,12 +5,11 @@
         <div class="row footer-information pb-5">
             <div class="col-lg-3 col-md-12 col-sm-12 text-center pt-4">
                 <!-- <img class="footer-logo img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/kauss_transparent-bg.png" alt="logo"> -->
-                
-                <a href="https://www.facebook.com/Ylkusaunake/">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/fb-grupp.png" width="150" />
-                   
-                    
-                </a>
+                <section id="fb-group">
+                    <a href="https://www.facebook.com/Ylkusaunake/">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/fb-grupp.png" width="150" />
+                    </a>
+                </section>
             </div>
             <?php $APR = array("aadress", "kontakt", "avatud"); ?>
             <?php for ($x = 0; $x <= 2; $x += 1) { ?>
