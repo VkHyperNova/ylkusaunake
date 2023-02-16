@@ -3,11 +3,9 @@ Theme Name: Ylkusaunake theme
 Author: VK-DEV
 */
 
-
-/***********************************************************************************************************************************************************************/
-/********************************************************************************* Main CSS ****************************************************************************/
-/***********************************************************************************************************************************************************************/
-/* Reset all Margins & Padding */
+/*
+Reset all Margins & Padding 
+*/
 * {
     margin: 0;
     padding: 0;
@@ -17,21 +15,20 @@ Author: VK-DEV
 
 body {
 
-
     /* Background */
     background-image: url('./img/bg-pattern.jpg');
     background-size: 100% 100%;
     background-attachment: fixed;
 
-    /* vars */
+    /* Variables */
     --color-black: rgb(31, 30, 30);
     --color-white: rgb(255, 255, 255);
     --color-light-gray: rgb(168, 167, 167);
     --color-light-blue: rgb(76, 117, 153);
-    --color-main-black: rgb(0, 0, 0, 0.65);
+    --color-half-black: rgb(0, 0, 0, 0.65);
     --color-red: rgb(235, 57, 57);
 
-    --main-box-shadow-1: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    --shadow-main: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 h1,
@@ -43,9 +40,16 @@ h6,
 p,
 li {
     letter-spacing: 1px;
-    color: var(--color-main-black);
+    color: var(--color-half-black);
 }
 
+a {
+    text-decoration: none !important;
+}
+
+.page-content {
+    min-height: 80vh;
+}
 
 ul {
     list-style-type: none;
@@ -56,39 +60,37 @@ ul {
     padding-left: 2rem;
 }
 
-/* Logo */
 .logo {
     width: 20rem;
     margin-top: 1rem;
 }
 
-
-/* colors */
+/*******************************************************************************************************************************************************************************************/
+/* Colors */
 
 .color-white {
-    color: var(--color-white) !important;
+    color: var(--color-white);
 }
 
 .color-blue {
-    color: var(--color-light-blue) !important;
+    color: var(--color-light-blue);
 }
 
 .color-gray {
-    color: var(--color-light-gray) !important;
+    color: var(--color-light-gray);
 }
 
 .color-red {
-    color: var(--color-red) !important;
+    color: var(--color-red);
+}
+
+.color-green {
+    color: green;
 }
 
 
-/* bg colors */
-.bg-black {
-    background-color: var(--color-black) !important;
-}
-
-/* letter-spacing */
-
+/*******************************************************************************************************************************************************************************************/
+/* Letter Spacing */
 .spacing-1 {
     letter-spacing: 1px !important;
 }
@@ -101,60 +103,34 @@ ul {
     letter-spacing: 3px !important;
 }
 
-.spacing-4 {
-    letter-spacing: 4px !important;
-}
-
-.spacing-5 {
-    letter-spacing: 5px !important;
-}
-
-/* font-size */
-.font-size-big {
-    font-size: 2rem !important;
-}
-
-
-/* containers */
+/*******************************************************************************************************************************************************************************************/
+/* Containers */
 .main-container {
     background: rgba(255, 255, 255, 0.8);
     border-radius: 5px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(3.6px);
-    -webkit-backdrop-filter: blur(3.6px);
-    border: 1px solid rgba(255, 255, 255, 1);
     overflow: hidden;
+    box-shadow: var(--shadow-main);
 }
 
-.front-page-container {
+.main-content-width {
     width: 75% !important;
 }
 
-.news-small-container {
+.news-container-size {
     min-height: 20rem;
     overflow: hidden;
     padding: 1rem;
     width: 400px;
 }
 
-.news-image-container {
-    height: 450px;
-}
-
-.contact-small-container {
+.contact-container-size {
     min-height: 13rem;
 }
 
-.contact-small-container li {
+.contact-container-size li {
     font-size: 1.2rem;
 }
 
-.wp-block-image {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
-
-/* google maps responsive  */
 .map-responsive {
     overflow: hidden;
     padding-bottom: 56.25%;
@@ -170,23 +146,12 @@ ul {
     position: absolute;
 }
 
+/*******************************************************************************************************************************************************************************************/
+/* Bootstrap 4 Navigation classes */
 
-
-/***********************************************************************************************************************************************************************/
-/********************************************************************************* Header ******************************************************************************/
-/***********************************************************************************************************************************************************************/
-
-
-
-
-
-
-
-
-
-
-/***********************************************************************************************************************************************************************/
-/* Navigation */
+.bg-black {
+    background-color: var(--color-black) !important;
+}
 
 nav li {
     font-size: 1.2rem;
@@ -195,8 +160,7 @@ nav li {
 }
 
 
-/***********************************************************************************************************************************************************************/
-/* hover & active effects */
+/* Hover & Active Effects */
 .navbar-nav .nav-link {
     color: var(--color-light-gray);
 }
@@ -206,23 +170,22 @@ nav li {
     color: var(--color-white);
     box-shadow: rgb(255, 255, 255) 6px 5px 5px;
     border-radius: 1rem;
-
 }
 
 /* OnClick */
 .navbar-nav :active>.nav-link {
     transform: scale(0.9);
-    transition: .2s;
+    transition: .3s;
 }
 
 /* Hover */
 .navbar-nav .nav-link:hover {
     color: var(--color-white);
-    transition: .2s;
+    transition: .3s;
 }
 
-/***********************************************************************************************************************************************************************/
-/* Fade-in effect */
+/*******************************************************************************************************************************************************************************************/
+/* Fade-in Animation */
 html {
     animation: fade-in .5s;
 }
@@ -232,20 +195,16 @@ nav {
     animation: fade-in 1s backwards .1s;
 }
 
-/* Keyframes */
 @keyframes fade-in {
     0% {
         opacity: 0;
     }
 }
 
+/*******************************************************************************************************************************************************************************************/
+/* P-Counter */
 
-/***********************************************************************************************************************************************************************/
-/********************************************************************************* front-page.php **********************************************************************/
-/***********************************************************************************************************************************************************************/
-
-/* Counter */
-.people-counter-container {
+.p-counter-container {
     text-align: center !important;
     background-image: url('./img/counter-img.jpg');
     background-size: 100% 100%;
@@ -254,72 +213,34 @@ nav {
     padding: 1rem;
 }
 
-.counter-gender-in,
-.counter-dash,
-.counter-gender-out,
-.counter-open-msg,
-.counter-people-max,
-.counter-highlight {
-    display: inline;
-    font-weight: bolder;
-    color: var(--color-light-gray);
-    font-size: 1rem;
-}
-
-#gender {
-    display: inline;
-    color: var(--color-light-gray);
-}
-
-.counter-highlight,
-.counter-dash {
+.btn-refresh {
     color: var(--color-white);
-    font-size: 1.5rem;
+    background-color: rgba(255, 0, 0, 0.5);
+    border-color: transparent;
 }
 
-.counter-open-msg {
-    font-size: 1.5rem;
-    color: green;
+.btn-refresh:hover {
+    border-color: var(--color-white);
+}
+
+.highlight {
+    color: var(--color-white) !important;
+    font-size: 1.5rem !important;
+}
+
+.blinking-animation {
     animation: counter-blinking 1s linear infinite;
 }
 
 @keyframes counter-blinking {
     50% {
-        opacity: 0.5;
+        opacity: 0.1;
+        color: var(--color-light-gray);
     }
 }
 
-.random-msg {
-    font-size: 1.5rem;
-    font-weight: bolder;
-    letter-spacing: 3px;
-}
-
-/***********************************************************************************************************************************************************************/
-/* Content */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/***********************************************************************************************************************************************************************/
-/********************************************************************************* Footer ******************************************************************************/
-/***********************************************************************************************************************************************************************/
-.page-content {
-    min-height: 80vh;
-}
-
+/*******************************************************************************************************************************************************************************************/
+/* Footer */
 
 footer {
     background-image: url('./img/footer-img.jpg');
@@ -327,76 +248,36 @@ footer {
     padding-top: 3rem;
 }
 
-/* footer information */
-.footer-information h5 {
-    color: var(--color-light-gray);
-    letter-spacing: 2px;
-}
-
-
-
-.footer-information li {
+footer li {
     font-size: 1.2rem;
     color: var(--color-white);
 }
 
-
-/* Footer Facebook Group Logo */
-#fb-group img:hover {
+#fb-group img:hover,
+#fb-group a:hover {
     transform: scale(.95);
-    transition: .3s;  
+    transition: .3s;
 }
 
-
-
-.footer-logo {
-    width: 10rem;
-}
-
-
-/* Copyright */
-
-.footer-copyright {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    text-align: center !important;
-}
-
-.footer-copyright span {
-    letter-spacing: 2px;
-    font-weight: bold;
-    color: var(--color-white);
-}
-
-.footer-copyright a {
-    float: right;
-    font-weight: bold;
-    color: var(--color-light-gray);
-    transition: 0.3s;
-}
-
-/* VK-dev watermark */
-.footer-copyright a:hover {
-    transform: scale(1.1);
-    transition: 0.2s;
+#footer-copyright a:hover {
+    transition: .3s;
     text-decoration: none;
     color: var(--color-white);
 }
 
-/***********************************************************************************************************************************************************************/
-/******************************************************************************** Mobile *******************************************************************************/
-/***********************************************************************************************************************************************************************/
+/*******************************************************************************************************************************************************************************************/
+/* Media Queries */
+
 
 /* Laptops */
-@media only screen and (max-width: 991px) {
-
-    .footer-information,
-    .logo-bg {
-        text-align: center !important;
-    }
-
-    .front-page-container {
+@media only screen and (max-width: 1400px) {
+    .main-content-width {
         width: 100% !important;
+    }
+}
+@media only screen and (max-width: 991px) {
+    footer {
+        text-align: center !important;
     }
 }
 
@@ -409,10 +290,7 @@ footer {
 
 
 @media only screen and (max-width: 460px) {
-
-    .news-small-container {
+    .news-container-size {
         width: auto;
     }
-
-
 }
