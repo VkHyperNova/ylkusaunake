@@ -1,13 +1,12 @@
 <?php get_header(); ?>
 
 <!-- Teenuste riba -->
-
 <?php if (get_field('sauna_info')['teenuste_riba']) : ?>
     <div class="container-fluid bg-light text-center p-3">
         <div class="row">
             <?php for ($x = 1; $x <= 4; $x += 1) { ?>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="color-blue font-italic spacing-2"><?php echo get_field('sauna_info')['teenuste_riba']['teenus_' . $x]; ?></h4>
+                    <h4 class="font-weight-bold font-italic spacing-2"><?php echo get_field('sauna_info')['teenuste_riba']['teenus_' . $x]; ?></h4>
                 </div>
             <?php } ?>
         </div>
@@ -63,9 +62,6 @@
         </div>
     <?php endif; ?>
 
-
-
-
     <!-- AVALEHT CONTENT -->
     <div class="container-fluid">
         <div class="row">
@@ -76,26 +72,26 @@
                 <!-- Main information -->
                 <div class="d-flex justify-content-center my-5">
                     <div class="main-container main-content-width p-sm-5 px-2 py-5 text-center">
-                        <h3 class="color-blue text-uppercase"><?php echo get_field('sauna_info')['tava_saun']['tava_sauna_info']; ?></h3>
-                        <div class="row pt-5 text-center">
+                        <h3 class="color-blue text-uppercase font-weight-bold"><?php echo get_field('sauna_info')['tava_saun']['tava_sauna_info']; ?></h3>
+                        <div class="row py-5 text-center">
                             <div class="col-sm-4 col-12">
-                                <h5>Naised</h5>
-                                <h6><?php echo get_field('sauna_info')['tava_saun']['tava_sauna_aeg']['naiste_aeg']; ?></h6>
+                                <h4>Naised</h4>
+                                <h5 class="font-weight-bold"><?php echo get_field('sauna_info')['tava_saun']['tava_sauna_aeg']['naiste_aeg']; ?></h5>
                             </div>
                             <div class="col-sm-4 col-12 p-sm-0 py-5">
-                                <h5>Mehed</h5>
-                                <h6><?php echo get_field('sauna_info')['tava_saun']['tava_sauna_aeg']['meeste_aeg']; ?></h6>
+                                <h4>Mehed</h4>
+                                <h5 class="font-weight-bold"><?php echo get_field('sauna_info')['tava_saun']['tava_sauna_aeg']['meeste_aeg']; ?></h5>
                             </div>
                             <?php if (get_field('sauna_info')['tava_saun']['naita_tavasauna_hinda']['naita_tavasauna_hinda_onoff']) : ?>
                                 <div class="col-sm-4 col-12">
-                                    <h5>Hind</h5>
-                                    <h6><?php echo get_field('sauna_info')['tava_saun']['naita_tavasauna_hinda']['tavasauna_hind']; ?> EUR</h6>
+                                    <h4>Hind</h4>
+                                    <h5 class="font-weight-bold"><?php echo get_field('sauna_info')['tava_saun']['naita_tavasauna_hinda']['tavasauna_hind']; ?> EUR</h5>
                                 </div>
                             <?php endif ?>
                         </div>
-                        <div class="pt-5">
-                            <hr>
-                            <p class="font-weight-bold text-center"><?php echo get_field('sauna_info')['broneerimine']['broneerise_info']; ?> - Lisainfo Tel. <?php echo get_field('sauna_info')['broneerimine']['kontaktid']['kontakt_telefon']; ?></p>
+                        <hr>
+                        <div class="">
+                            <h5 class="font-weight-bold font-italic text-center"><?php echo get_field('sauna_info')['broneerimine']['broneerise_info']; ?> - Lisainfo Tel. <?php echo get_field('sauna_info')['broneerimine']['kontaktid']['kontakt_telefon']; ?></h5>
                         </div>
                     </div>
                 </div>
@@ -103,20 +99,20 @@
                 <!-- Asukoht -->
                 <div class="d-flex justify-content-center my-5">
                     <div class="main-container main-content-width p-sm-5 px-2 py-5 text-md-left text-center">
-                        <h3 class="color-blue">Asukoht</h3>
-                        <p><?php echo get_field('sauna_info')['asukoht']['sauna_aadress']; ?></p>
+                        <h3 class="color-blue font-weight-bold">Asukoht</h3>
+                        <p class="font-weight-bold"><?php echo get_field('sauna_info')['asukoht']['sauna_aadress']; ?></p>
 
                         <!-- Google map -->
                         <div class="map-responsive">
                             <iframe style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2095.5975121683023!2d26.722057816115733!3d58.315846098904665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eb3a0f7a60a9d1%3A0xf31a787ed1c7c89f!2sPargi%207a%2C%20%C3%9Clenurme%2C%2061714%20Tartu%20maakond!5e0!3m2!1sen!2see!4v1674840659985!5m2!1sen!2see"></iframe>
-                        </div>                        
+                        </div>
                     </div>
                 </div>
 
-                <!-- Sauna Pilt -->
+                <!-- Sauna pilt -->
                 <div class="d-flex justify-content-center">
                     <div class="main-container main-content-width p-sm-5 px-2 py-5 text-md-left text-center">
-                        <h3 class="color-blue pb-2">Ylkusaunake</h3>
+                        <h3 class="color-blue font-weight-bold pb-2">Ylkusaunake</h3>
                         <img class="img-fluid" src="<?php echo get_field('sauna_info')['asukoht']['sauna_pilt']; ?>" alt="Eest vaade">
                     </div>
                 </div>
@@ -125,7 +121,7 @@
             <!-- News column -->
             <div class="col-lg-4">
                 <div class="my-5">
-                    <h4 class="color-blue text-uppercase text-center pb-3">Viimased Uudised</h4>
+                    <h4 class="color-blue font-weight-bold text-uppercase text-center pb-3">Viimased Uudised</h4>
                     <div class="row">
                         <?php $lastposts = get_posts(array('posts_per_page' => 4)); ?>
                         <?php if ($lastposts) {
@@ -140,7 +136,7 @@
 
                                             <hr>
                                             <!-- Title -->
-                                            <h5 class="pb-4 font-weight-bold color-blue"><?php the_title(); ?></h5>
+                                            <h5 class="pb-4 font-weight-bold"><?php the_title(); ?></h5>
 
                                             <!-- Content -->
                                             <?php if (get_field('uudise_pilt')) : ?>
@@ -164,7 +160,6 @@
             </div>
         </div>
     </div><!--  container-fluid end -->
-
 
     <!-- wp content -->
     <div class="container">

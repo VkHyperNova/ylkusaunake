@@ -6,6 +6,7 @@ Author: VK-DEV
 /*
 Reset all Margins & Padding 
 */
+
 * {
     margin: 0;
     padding: 0;
@@ -168,7 +169,7 @@ nav li {
 /* Active link */
 .navbar-nav .active>.nav-link {
     color: var(--color-white);
-    box-shadow: rgb(255, 255, 255) 6px 5px 5px;
+    box-shadow: rgb(179, 171, 171) 6px 5px 5px;
     border-radius: 1rem;
 }
 
@@ -298,47 +299,22 @@ footer li {
 }
 
 @media only screen and (max-width: 330px) {
-    h1 {
-        font-size: 5vw!important;
-    }
 
-    h2 {
-        font-size: 5vw!important;
-    }
-
-    h3 {
-        font-size: 5vw!important;
-    }
-
-    h4 {
-        font-size: 5vw!important;
-    }
-
-    h5 {
-        font-size: 4vw!important;
-    }
-
-    h6 {
-        font-size: 4vw!important;
-    }
-
-    p {
-        font-size: 4vw!important;
-    }
-
-    a {
-        font-size: 4vw!important;
-    }
-
-    li {
-        font-size: 4vw !important;
-    }
-
-    span {
-        font-size: 4vw !important;
-    }
-
+    h1,
+    h2,
+    h3,
+    h4,
     .highlight {
+        font-size: 5vw !important;
+    }
+
+    h5,
+    h6,
+    p,
+    a,
+    li,
+    span,
+    .btn {
         font-size: 4vw !important;
     }
 
@@ -346,8 +322,4 @@ footer li {
         padding: 0;
     }
 
-    .btn {
-        font-size: 4vw;
-        
-    }
 }
