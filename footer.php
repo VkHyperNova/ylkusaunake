@@ -8,7 +8,7 @@
                 <!-- Facebook group -->
                 <section id="fb-group">
                     <a href="https://www.facebook.com/Ylkusaunake/">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/fb-grupp.png" width="150" />
+                        <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/fb-grupp.png" width="150" />
                     </a>
                 </section>
             </div>
