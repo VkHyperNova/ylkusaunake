@@ -7,7 +7,7 @@
         <h1 class="font-weight-bold">Meist</h1>
         <section class="my-5">
             <div class="main-container">
-                <div class="p-sm-5 p-2">
+                <div class="p-sm-5 p-4">
                     <?php the_field('meist_sauna_kirjeldus') ?>
                 </div>
             </div>

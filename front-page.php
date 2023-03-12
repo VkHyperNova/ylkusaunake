@@ -71,7 +71,7 @@
 
                 <!-- Main information -->
                 <div class="d-flex justify-content-center my-5">
-                    <div class="main-container main-content-width p-sm-5 px-2 py-5 text-center">
+                    <div class="main-container main-content-width p-sm-5 px-4 py-5 text-center">
                         <h3 class="color-blue text-uppercase font-weight-bold"><?php echo get_field('sauna_info')['tava_saun']['tava_sauna_info']; ?></h3>
                         <div class="row py-5 text-center">
                             <div class="col-sm-4 col-12">
