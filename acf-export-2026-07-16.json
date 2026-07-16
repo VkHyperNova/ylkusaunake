@@ -118,29 +118,9 @@
                         ]
                     },
                     {
-                        "key": "field_6a58c9537b5e5",
-                        "label": "Tava Sauna Info",
-                        "name": "tava_sauna_info",
-                        "aria-label": "",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "maxlength": "",
-                        "placeholder": "",
-                        "prepend": "",
-                        "append": ""
-                    },
-                    {
-                        "key": "field_6a58c9767b5e6",
-                        "label": "Tava Sauna Aeg",
-                        "name": "tava_sauna_aeg",
+                        "key": "field_6a58c9007b5e4",
+                        "label": "Tava Saun",
+                        "name": "tava_saun",
                         "aria-label": "",
                         "type": "group",
                         "instructions": "",
@@ -154,9 +134,9 @@
                         "layout": "block",
                         "sub_fields": [
                             {
-                                "key": "field_6a58c9a37b5e7",
-                                "label": "Naiste Aeg",
-                                "name": "naiste_aeg",
+                                "key": "field_6a58c9537b5e5",
+                                "label": "Tava Sauna Info",
+                                "name": "tava_sauna_info",
                                 "aria-label": "",
                                 "type": "text",
                                 "instructions": "",
@@ -174,11 +154,11 @@
                                 "append": ""
                             },
                             {
-                                "key": "field_6a58c9ad7b5e8",
-                                "label": "Meeste Aeg",
-                                "name": "meeste_aeg",
+                                "key": "field_6a58c9767b5e6",
+                                "label": "Tava Sauna Aeg",
+                                "name": "tava_sauna_aeg",
                                 "aria-label": "",
-                                "type": "text",
+                                "type": "group",
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -187,56 +167,56 @@
                                     "class": "",
                                     "id": ""
                                 },
-                                "default_value": "",
-                                "maxlength": "",
-                                "placeholder": "",
-                                "prepend": "",
-                                "append": ""
-                            }
-                        ]
-                    },
-                    {
-                        "key": "field_6a58c9de7b5e9",
-                        "label": "Naita Tabasauna Hinda",
-                        "name": "naita_tabasauna_hinda",
-                        "aria-label": "",
-                        "type": "group",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "layout": "block",
-                        "sub_fields": [
-                            {
-                                "key": "field_6a58ca097b5ea",
-                                "label": "Naita Tavasauna Hinda ONOFF",
-                                "name": "naita_tavasauna_hinda_onoff",
-                                "aria-label": "",
-                                "type": "true_false",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                },
-                                "message": "",
-                                "default_value": 0,
-                                "ui": 0,
-                                "ui_on_text": "",
-                                "ui_off_text": ""
+                                "layout": "block",
+                                "sub_fields": [
+                                    {
+                                        "key": "field_6a58c9a37b5e7",
+                                        "label": "Naiste Aeg",
+                                        "name": "naiste_aeg",
+                                        "aria-label": "",
+                                        "type": "text",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "maxlength": "",
+                                        "placeholder": "",
+                                        "prepend": "",
+                                        "append": ""
+                                    },
+                                    {
+                                        "key": "field_6a58c9ad7b5e8",
+                                        "label": "Meeste Aeg",
+                                        "name": "meeste_aeg",
+                                        "aria-label": "",
+                                        "type": "text",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "maxlength": "",
+                                        "placeholder": "",
+                                        "prepend": "",
+                                        "append": ""
+                                    }
+                                ]
                             },
                             {
-                                "key": "field_6a58ca287b5eb",
-                                "label": "Tavasauna hind",
-                                "name": "tavasauna_hind",
+                                "key": "field_6a58c9de7b5e9",
+                                "label": "Naita Tavasauna Hinda",
+                                "name": "naita_tavasauna_hinda",
                                 "aria-label": "",
-                                "type": "text",
+                                "type": "group",
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -245,11 +225,49 @@
                                     "class": "",
                                     "id": ""
                                 },
-                                "default_value": "",
-                                "maxlength": "",
-                                "placeholder": "",
-                                "prepend": "",
-                                "append": ""
+                                "layout": "block",
+                                "sub_fields": [
+                                    {
+                                        "key": "field_6a58ca097b5ea",
+                                        "label": "Naita Tavasauna Hinda ONOFF",
+                                        "name": "naita_tavasauna_hinda_onoff",
+                                        "aria-label": "",
+                                        "type": "true_false",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "message": "",
+                                        "default_value": 0,
+                                        "ui": 0,
+                                        "ui_on_text": "",
+                                        "ui_off_text": ""
+                                    },
+                                    {
+                                        "key": "field_6a58ca287b5eb",
+                                        "label": "Tavasauna hind",
+                                        "name": "tavasauna_hind",
+                                        "aria-label": "",
+                                        "type": "text",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "maxlength": "",
+                                        "placeholder": "",
+                                        "prepend": "",
+                                        "append": ""
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -630,6 +648,75 @@
                     "param": "page",
                     "operator": "==",
                     "value": "14"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    },
+    {
+        "key": "group_6a58dde345622",
+        "title": "Uudised",
+        "fields": [
+            {
+                "key": "field_6a58dde38451b",
+                "label": "Uudise Pilt",
+                "name": "uudise_pilt",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "preview_size": "medium"
+            },
+            {
+                "key": "field_6a58de308451d",
+                "label": "Uudise Sisu",
+                "name": "uudise_sisu",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
                 }
             ]
         ],
