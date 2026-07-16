@@ -91,7 +91,7 @@
                         </div>
                         <hr>
                         <div class="">
-                            <h5 class="font-weight-bold font-italic text-center"><?php echo get_field('sauna_info')['broneerimine']['broneerise_info']; ?> - Lisainfo Tel. <?php echo get_field('sauna_info')['broneerimine']['kontaktid']['kontakt_telefon']; ?></h5>
+                            <h5 class="font-weight-bold font-italic text-center"><?php echo get_field('sauna_info')['broneerimine']['broneerimise_info']; ?> - Lisainfo Tel. <?php echo get_field('sauna_info')['broneerimine']['kontaktid']['kontakt_telefon']; ?></h5>
                         </div>
                     </div>
                 </div>
