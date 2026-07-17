@@ -16,7 +16,7 @@
 <body <?php body_class(); ?>>
 
 
-    <?php $pageid = 201 ?>
+    <?php $pageid = get_option('page_on_front'); ?>
 
     <!-- LOGO -->
     <div class="container">
